@@ -1,0 +1,152 @@
+.display-music
+{
+  display: none;
+}
+
+li:hover .display-music
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -2;
+  display: block;
+}
+
+.muzieknootjes 
+{
+  margin: auto;
+  position: relative;
+  color: #09bd5a;
+}
+  
+.noot-1,
+.noot-2,
+.noot-3,
+.noot-4,
+.noot-5,
+.noot-6,
+.noot-7,
+.noot-8,
+.noot-9,
+.noot-10,
+.noot-11,
+.noot-12  
+{
+  position: absolute;
+  animation: notes 2s infinite linear;
+  font-size: 55px;
+  opacity: 0;
+}
+
+.noot-1 
+{
+  top: 60px;
+  left: 0;
+  animation-delay: 0.5s;
+}
+
+.noot-2 
+{
+  top: 30px;
+  left: 30%;
+  animation-delay: 1s;
+}
+
+.noot-3 
+{
+  top: 90px;
+  left: 60%;
+  animation-delay: 1.5s;
+}
+
+.noot-4 
+{
+  top: 40px;
+  left: 90%;
+  animation-delay: 2s;
+}
+
+.noot-5 
+{
+  top: 600px;
+  left: 5%;
+  animation-delay: 0.5s;
+}
+
+.noot-6 
+{
+  top: 300px;
+  left: 20%;
+  animation-delay: 0.8s;
+}
+
+.noot-7 
+{
+  top: 500px;
+  left: 60%;
+  animation-delay: 1.5s;
+}
+
+.noot-8 
+{
+  top: 600px;
+  left: 90%;
+  animation-delay: 1.8s;
+}
+
+.noot-9 
+{
+  top: 200px;
+  left: 40%;
+  animation-delay: 1s;
+}
+
+.noot-10
+{
+  top: 300px;
+  left: 50%;
+  animation-delay: 1.2s;
+}
+
+.noot-11
+{
+  top: 600px;
+  left: 40%;
+  animation-delay: 1.6s;
+}
+
+.noot-12 
+{
+  top: 800px;
+  left: 50%;
+  animation-delay: 2s;
+}
+
+@keyframes notes 
+{
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.5) translate(50%, -50%);
+  }
+  80% {
+    opacity: 0;
+    transform: scale(1.5) translate(100%, -100%);
+  }
+  100% {
+    transform: scale(1.5) translate(100%, -100%);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut 
+{
+  0% {opacity: 1;}
+  100% {opacity: 0;} 
+}

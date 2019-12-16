@@ -1,0 +1,104 @@
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: #ffffff;
+}
+
+#nav-grid {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  overflow: hidden;
+}
+
+/* NAVIGATION */
+nav li {
+  height: 75%;
+  list-style: none;
+}
+
+.nav-linkz {
+  text-decoration: none;
+  color: #000000;
+}
+
+.nav-music {
+  width: 40%;
+  margin-left: 20%;
+  font-family: "Arial", sans-serif;
+  font-size: 50px;
+  animation-name: music;
+  animation-duration: 2s;
+}
+
+@keyframes music {
+  from {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.nav-artwork {
+  width: 55%;
+  margin-left: 20%;
+  font-family: "Arial", sans-serif;
+  font-size: 50px;
+  animation-name: artwork;
+  animation-duration: 2s;
+}
+
+@keyframes artwork {
+  from {
+    transform: translateY(-400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.nav-design {
+  margin-top: 50%;
+  margin-left: 20%;
+  font-family: "Arial", sans-serif;
+  font-size: 50px;
+  animation-name: design;
+  animation-duration: 2s;
+}
+
+@keyframes design {
+  from {
+    transform: translateY(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.nav-photo {
+  margin-top: 50%;
+  margin-left: 20%;
+  font-family: "Arial", sans-serif;
+  font-size: 50px;
+  animation-name: photo;
+  animation-duration: 2s;
+}
+
+@keyframes photo {
+  from {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=/style.500aa19d.css.map */
