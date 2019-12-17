@@ -1,49 +1,10 @@
-$(function() {
-				
-    var Page = (function() {
-      
-      var $navArrows = $( '#nav-arrows' ).hide(),
-          $shadow = $( '#shadow' ).hide(),
-          slicebox = $( '#sb-slider' ).slicebox( {
-            onReady : function() {
-              
-              $navArrows.show();
-              $shadow.show();
-              
-            },
-            orientation : 'r',
-            cuboidsRandom : true,
-            disperseFactor : 30
-          } ),
-          
-          init = function() {
-            
-            initEvents();
-            
-          },
-          initEvents = function() {
-            
-            // add navigation events
-            $navArrows.children( ':first' ).on( 'click', function() {
-              
-              slicebox.next();
-              return false;
-              
-            } );
-            
-            $navArrows.children( ':last' ).on( 'click', function() {
-              
-              slicebox.previous();
-              return false;
-              
-            } );
-            
-          };
-      
-      return { init : init };
-      
-    })();
-    
-    Page.init();
-    
-  });  
+$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() {
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+}, 3000);
