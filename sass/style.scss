@@ -22,6 +22,16 @@ nav li
 	list-style: none;
 }
 
+nav ul:hover li a
+{
+	opacity: 0.5;
+}
+
+nav ul li a:hover
+{
+	opacity: 1;
+}
+
 .nav-linkz
 {
 	text-decoration: none;
