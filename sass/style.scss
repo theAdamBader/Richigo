@@ -32,6 +32,11 @@ nav ul li a:hover
 	opacity: 1;
 }
 
+nav ul.selected li a
+{
+	opacity: 0;
+}
+
 .nav-linkz
 {
 	text-decoration: none;

@@ -22,7 +22,7 @@
   -webkit-transition: all 0.5s ease-in-out;   
 }
 
-#D3Cube > #side1, #side2, #side3, #side4, #side5, #side6 {
+#D3Cube > div {
   position: absolute;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -49,6 +49,18 @@ li:hover .display-cube
 {
   animation: cubeScaleXL 2s forwards;
 }
+
+li.selected .display-cube
+{
+  animation: cubeScaleXXXL 2s forwards;
+  overflow: hidden;
+  z-index: 99;
+}
+
+/* 
+.display-cube li:active {
+  transform: scale(4, 4, 4);
+} */
 
 #side1 
 {
@@ -128,4 +140,10 @@ li:hover .display-cube
 { 
   0% {transform: scale(0);}
   100% {transform: scale(1);}
+}
+
+@keyframes cubeScaleXXXL
+{ 
+  0% {transform: scale(1);}
+  100% {transform: scale(5);}
 }
