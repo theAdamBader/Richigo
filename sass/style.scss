@@ -1,7 +1,7 @@
 body 
 {
-	margin: 0%;
-	padding: 0%;
+	margin: 0;
+	padding: 0;
 	background-color: #ffffff;
 }
 
@@ -49,15 +49,15 @@ nav ul.selected li a
 	margin-left: 20%;
 	font-family: 'Arial', sans-serif;
 	font-size: 50px;
-	animation-name: music;
-	animation-duration: 2s;
+	// animation-name: music;
+	// animation-duration: 2s;
 }
 
-@keyframes music
-{
-	from{ transform: translateX(-500px); opacity: 0; }
-	to{transform: translateX(0); opacity: 1;}
-}
+// @keyframes music
+// {
+// 	from{ transform: translateX(-500px); opacity: 0; }
+// 	to{transform: translateX(0); opacity: 1;}
+// }
 
 .nav-artwork
 {
@@ -65,15 +65,15 @@ nav ul.selected li a
 	margin-left: 20%;
 	font-family: 'Arial', sans-serif;
 	font-size: 50px;
-	animation-name: artwork;
-	animation-duration: 2s;
+	// animation-name: artwork;
+	// animation-duration: 2s;
 }
 
-@keyframes artwork
-{
-	from{ transform: translateY(-400px); opacity: 0; }
-	to{transform: translateY(0); opacity: 1;}
-}
+// @keyframes artwork
+// {
+// 	from{ transform: translateY(-400px); opacity: 0; }
+// 	to{transform: translateY(0); opacity: 1;}
+// }
 
 .nav-design
 {
@@ -81,15 +81,15 @@ nav ul.selected li a
 	margin-left: 20%;
 	font-family: 'Arial', sans-serif;
 	font-size: 50px;
-	animation-name: design;
-	animation-duration: 2s;
+	// animation-name: design;
+	// animation-duration: 2s;
 }
 
-@keyframes design
-{
-	from{transform: translateY(400px); opacity: 0;}
-	to{transform: translateX(0); opacity: 1;}
-}
+// @keyframes design
+// {
+// 	from{transform: translateY(400px); opacity: 0;}
+// 	to{transform: translateX(0); opacity: 1;}
+// }
 
 .nav-photo
 {
@@ -97,14 +97,26 @@ nav ul.selected li a
 	margin-left: 20%;
 	font-family: 'Arial', sans-serif;
 	font-size: 50px;
-	animation-name: photo;
-	animation-duration: 2s;
+	// animation-name: photo;
+	// animation-duration: 2s;
 }
 
-@keyframes photo
-{
-	from{ transform: translateX(500px); opacity: 0; }
-	to{transform: translateX(0); opacity: 1;}
-}
+// @keyframes photo
+// {
+// 	from{ transform: translateX(500px); opacity: 0; }
+// 	to{transform: translateX(0); opacity: 1;}
+// }
 
 //=================================================================================================================//
+
+.focus
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(#000000, 10%) 14%, #000000 18%);
+	pointer-events: none;
+	mix-blend-mode: darken;  
+	z-index: -99;
+}

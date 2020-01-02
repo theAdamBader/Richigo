@@ -41,8 +41,6 @@
   overflow: hidden;
   z-index: -2;
   animation: cubeScale 2s forwards;
-  visibility: visible !important;
-  /* animation-delay: 5s; */
 }
 
 li:hover .display-cube
