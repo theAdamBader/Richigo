@@ -143,5 +143,5 @@ li.selected .display-cube
 @keyframes cubeScaleXXXL
 { 
   0% {transform: scale(1);}
-  100% {transform: scale(5);}
+  100% {transform: scale(5); background: rgba(46, 204, 113, 1); z-index: 1;}
 }
