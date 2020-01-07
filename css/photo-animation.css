@@ -33,13 +33,13 @@
 	left: 0;
 	overflow: hidden;
 	z-index: -2;
-	animation: photoScale 2s forwards;
+	animation: photoScale 1s forwards;
 	/* animation-delay: 5s; */
 }
 
 li:hover .display-photo
 {
-	animation: photoScaleXL 2s forwards;
+	animation: photoScaleXL 1s forwards;
 }
 
 @keyframes photoScale

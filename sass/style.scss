@@ -33,11 +33,6 @@ nav ul li a:hover
 	color: #c00606;
 }
 
-// nav ul.selected li a
-// {
-// 	opacity: 0;
-// }
-
 .nav-linkz
 {
 	text-decoration: none;
@@ -164,4 +159,19 @@ nav ul li a:hover
 	pointer-events: none;
 	mix-blend-mode: darken;  
 	z-index: -2;
+}
+
+.center-img
+{
+	height: auto;
+	width: 100%;
+	max-width: 25%;
+	position: absolute;
+	left:0; 
+	right:0;	
+	top:0; 
+	bottom:0;
+    margin:auto;
+	z-index: -3;
+	border-radius: 100%;
 }

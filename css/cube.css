@@ -45,12 +45,12 @@
 
 li:hover .display-cube
 {
-  animation: cubeScaleXL 2s forwards;
+  animation: cubeScaleXL 1s forwards;
 }
 
 li.selected .display-cube
 {
-  animation: cubeScaleXXXL 2s forwards;
+  animation: cubeScaleXXXL 1s forwards;
   overflow: hidden;
   z-index: 99;
 }

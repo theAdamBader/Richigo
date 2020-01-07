@@ -118,12 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/animation-transition.js":[function(require,module,exports) {
-//Keeps selected class active/focused (ul elements)
-$('ul').on('click', function () {
-  $('ul').removeClass('selected');
-  $(this).addClass('selected');
-}); //Keeps selected class active/focused (li elements)
-
+//Keeps selected class active/focused (li elements)
 $('li').on('click', function () {
   $('li').removeClass('selected');
   $(this).addClass('selected');
@@ -167,7 +162,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60817" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62957" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

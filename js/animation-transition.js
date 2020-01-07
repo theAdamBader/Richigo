@@ -1,9 +1,3 @@
-//Keeps selected class active/focused (ul elements)
-$('ul').on('click', function(){
-    $('ul').removeClass('selected');
-    $(this).addClass('selected');
-});
-
 //Keeps selected class active/focused (li elements)
 $('li').on('click', function(){
     $('li').removeClass('selected');
