@@ -117,23 +117,29 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/animation-transition.js":[function(require,module,exports) {
-//Keeps selected class active/focused (li elements)
-$('li').on('click', function () {
-  $('li').removeClass('selected');
-  $(this).addClass('selected');
-});
-setTimeout(function () {
-  $('.loader').fadeToggle();
-}, 1000); //Pauses page before tranisitioning to the next page
+})({"js/modal-text-box.js":[function(require,module,exports) {
+// Get the modal
+var modal = document.getElementById("myModal"); // Get the button that opens the modal
 
-$('.page-transition').click(function (e) {
-  e.preventDefault();
-  var linkUrl = $(this).attr('href');
-  setTimeout(function (url) {
-    window.location = url;
-  }, 3000, linkUrl);
-});
+var btn = document.getElementById("myImg"); // Get the <span> element that closes the modal
+
+var span = document.getElementsByClassName("close")[0]; // When the user clicks the button, open the modal 
+
+btn.onclick = function () {
+  modal.style.display = "block";
+}; // When the user clicks on <span> (x), close the modal
+
+
+span.onclick = function () {
+  modal.style.display = "none";
+}; // When the user clicks anywhere outside of the modal, close it
+
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
 },{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -338,5 +344,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/animation-transition.js"], null)
-//# sourceMappingURL=/animation-transition.6379658e.js.map
+},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/modal-text-box.js"], null)
+//# sourceMappingURL=/modal-text-box.be862646.js.map

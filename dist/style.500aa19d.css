@@ -28,6 +28,10 @@ nav ul li a:hover {
   color: #c00606;
 }
 
+ul li:hover > .goAway {
+  display: none;
+}
+
 .nav-linkz {
   text-decoration: none;
   color: #000000;
@@ -162,6 +166,7 @@ nav ul li a:hover {
 }
 
 .center-img {
+  display: block;
   height: auto;
   width: 100%;
   max-width: 25%;
@@ -171,7 +176,7 @@ nav ul li a:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  z-index: -3;
+  z-index: 3;
   border-radius: 100%;
 }
 
