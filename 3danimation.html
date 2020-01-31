@@ -7,7 +7,7 @@
     <title>Document</title>
 
     <!-- CSS -->
-    <link href="./sass/page-style.scss" rel="stylesheet">
+    <link href="./css/page-style.css" rel="stylesheet">
 </head>
 <body>
     <a href="./index.html" class="close"></a>
@@ -17,5 +17,30 @@
         </div>
     </div>
 
+
+    <div class="img-container">
+        <div class="button" onclick="shiftLeft()"><img src="https://image.ibb.co/mRsEb7/left_arrow.png" alt=""></div>
+        <div class="cards-wrapper">
+            <ul class="cards-container">
+                <li class="box">
+                    <img class="img-size" src="./img/photography/2.jfif" alt="">
+                </li>
+                <li class="box">
+                    <img class="img-size" src="./img/photography/1.jfif" alt="">
+                </li>
+                <li class="box">box 3</li>
+                <li class="box">box 4</li>
+                <li class="box">box 5</li>
+                <li class="box box--hide">box 6</li>
+                <li class="box box--hide">box 7</li>
+            </ul>
+        </div>
+        <div class="button" onclick="shiftRight()"><img src="https://image.ibb.co/dfPSw7/right_arrow.png" alt=""></div>
+    </div>
+
+
+  	<!-- JavaScript/jQuery  -->
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+      <script type="text/javascript" src="./js/img-slider.js"></script>
 </body>
 </html>
