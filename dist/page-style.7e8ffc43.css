@@ -1,16 +1,32 @@
 body
 {
-    margin: 0;
+  margin: 0;
 	padding: 0;
-	background-color: #ffffff;
+  background-color: #ffffff;
+  overflow-x: hidden;
 }
-
-p{color: white;}
 
 .title
 {
-    font-size: 2em; 
-    p{color: white;}
+  color: #ffffff;
+  font-size: 2em; 
+}
+
+.sub-title
+{
+  font-size: 1.8em;
+  height: auto;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paragraph-container
+{
+  height: auto;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .top-page
@@ -25,6 +41,8 @@ p{color: white;}
     z-index: -1;
     transform:rotate(-1deg);
 }
+
+p{color: #000000;}
 
 .strip
 {
@@ -193,47 +211,52 @@ p{color: white;}
   .move-to-position5-from-right{
     animation: moveToP5Right 0.5s ease-in-out;
   }
+
   .move-to-position4-from-right{
     animation: moveToP4Right 0.5s ease-in-out;
   }
+
   .move-to-position3-from-right{
     animation: moveToP3Right 0.5s ease-in-out;
   }
+
   .move-to-position2-from-right{
     animation: moveToP2Right 0.5s ease-in-out;
   }
+
   .move-to-position1-from-right{
     animation: moveToP1Right 0.5s ease-in-out;
   }
   
-  @keyframes moveOutLeft {
-    0% {
-        transform: scale(0.75) translateX(0%);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(0.5) translateX(-150%);
-        opacity: 0.5;
-    }
-    100% {
-        transform: scale(0.25) translateX(0%);
-        opacity: 0;
-    }
+@keyframes moveOutLeft {
+  0% {
+      transform: scale(0.75) translateX(0%);
+      opacity: 1;
   }
+  50% {
+      transform: scale(0.5) translateX(-150%);
+      opacity: 0.5;
+  }
+  100% {
+      transform: scale(0.25) translateX(0%);
+      opacity: 0;
+  }
+}
 
-  @keyframes moveOutRight {
-    0% {
-        transform: scale(0.75) translateX(0%);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(0.5) translateX(150%);
-        opacity: 0.5;
-    }
-    100% {
-        transform: scale(0.25) translateX(0%);
-        opacity: 0;
-    }
+
+@keyframes moveOutRight {
+  0% {
+      transform: scale(0.75) translateX(0%);
+      opacity: 1;
+  }
+  50% {
+      transform: scale(0.5) translateX(150%);
+      opacity: 0.5;
+  }
+  100% {
+      transform: scale(0.25) translateX(0%);
+      opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=/page-style.7e8ffc43.css.map */
