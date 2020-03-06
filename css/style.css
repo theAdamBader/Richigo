@@ -181,3 +181,10 @@ ul li:hover > .goAway
 	z-index: 3;
 	border-radius: 100%;
 }
+
+@media screen and (max-width: 800px)
+{
+	.disappear{
+		display: none;
+	}
+}

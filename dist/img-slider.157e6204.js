@@ -125,7 +125,7 @@ function shiftLeft() {
   setTimeout(function () {
     if (boxes.length > 3) {
       tmpNode.classList.add("hide-box");
-      boxes[3].className = "box move-to-position5-from-left";
+      boxes[3].className = "box move-to-position3-from-left";
     }
 
     boxes[1].className = "box move-to-position1-from-left";
@@ -183,7 +183,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51387" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50617" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

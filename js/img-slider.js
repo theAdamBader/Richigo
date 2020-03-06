@@ -6,7 +6,7 @@ function shiftLeft() {
     setTimeout(function() {
         if (boxes.length > 3) {
             tmpNode.classList.add("hide-box");
-            boxes[3].className = "box move-to-position5-from-left";
+            boxes[3].className = "box move-to-position3-from-left";
         }
         boxes[1].className = "box move-to-position1-from-left";
         boxes[2].className = "box move-to-position2-from-left";
