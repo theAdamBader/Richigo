@@ -1,9 +1,11 @@
-const focusEl = document.querySelector('.focus');
+const spotlightEle = document.querySelector('.focus');
 
-document.addEventListener('mousemove', function (evt) {
-  const x = evt.pageX;
-  const y = evt.pageY;
+document.addEventListener('mousemove', (e) => {
+  const coords = {
+    x: e.clientX,
+    y: e.clientY
+  }
   
-  focusEl.style.setProperty('--x', `${x}px`);
-  focusEl.style.setProperty('--y', `${y}px`);
-});
+  spotlightEle.style.setProperty('--x', `${coords.x}px`);
+  spotlightEle.style.setProperty('--y', `${coords.y}px`);
+})

@@ -117,45 +117,74 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/img-slider.js":[function(require,module,exports) {
-function shiftLeft() {
-  var boxes = document.querySelectorAll(".box");
-  var tmpNode = boxes[0];
-  boxes[0].className = "box move-out-from-left";
-  setTimeout(function () {
-    if (boxes.length > 3) {
-      tmpNode.classList.add("hide-box");
-      boxes[3].className = "box move-to-position3-from-left";
-    }
+})({"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
 
-    boxes[1].className = "box move-to-position1-from-left";
-    boxes[2].className = "box move-to-position2-from-left";
-    boxes[0].remove();
-    document.querySelector(".cards-container").appendChild(tmpNode);
-  }, 500);
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
 }
 
-function shiftRight() {
-  var boxes = document.querySelectorAll(".box");
-  boxes[2].className = "box move-out-from-right";
-  setTimeout(function () {
-    var noOfCards = boxes.length;
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
 
-    if (noOfCards > 2) {
-      boxes[2].className = "box hide-box";
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
     }
 
-    var tmpNode = boxes[noOfCards - 1];
-    tmpNode.classList.remove("hide-box");
-    boxes[noOfCards - 1].remove();
-    var parentObj = document.querySelector(".cards-container");
-    parentObj.insertBefore(tmpNode, parentObj.firstChild);
-    tmpNode.className = "box move-to-position1-from-right";
-    boxes[0].className = "box move-to-position2-from-right";
-    boxes[1].className = "box move-to-position3-from-right";
-  }, 500);
+    cssTimeout = null;
+  }, 50);
 }
-},{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -183,7 +212,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65470" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60318" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -359,5 +388,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/img-slider.js"], null)
-//# sourceMappingURL=/img-slider.157e6204.js.map
+},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/index.js.map
