@@ -5,6 +5,8 @@ body
 	background-color: #ffffff;
 }
 
+/* CONTAINER */
+
 .container
 {
 	height: 100%;
@@ -15,7 +17,46 @@ body
 {
 	height: 95vh;
 	width: 100%;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
+
+.mobpage{display: none;}
+.mainpage{display: block;}
+
+//=================================================================================================================//
+
+/* FONT */
+
+h1
+{
+	font-size: 120px;
+	margin-bottom: -50px;
+}
+
+h2
+{
+	font-size: 40px;
+	margin-right: 150px;
+}
+
+h1,
+h2,
+h3
+{
+	text-transform: uppercase;
+}
+
+span
+{
+	color: #2fff05;
+}
+
+//=================================================================================================================//
+
+/* NAVIGATION */
 
 #nav-grid
 {
@@ -26,10 +67,6 @@ body
 	grid-auto-rows: minmax(100px, auto);
 	overflow: hidden;
 }
-
-/* NAVIGATION */
-.mobpage{display: none;}
-.mainpage{display: block;}
 
 nav li
 {
@@ -46,11 +83,6 @@ nav ul li a:hover
 {
 	opacity: 1;
 	color: #c00606;
-}
-
-ul li:hover > .goAway
-{
-	display: none;//solve issue
 }
 
 .nav-linkz
@@ -167,7 +199,23 @@ ul li:hover > .goAway
 	}
 }
 
+.centreImg
+{
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left:0; 
+	right:0;	
+	top:0; 
+	bottom:0;
+	opacity: 0.9;
+	z-index: -99;
+}
+
 //=================================================================================================================//
+
+/* SPOTLIGHT */
 
 .focus
 {
@@ -182,22 +230,10 @@ ul li:hover > .goAway
 	mix-blend-mode: darken;  
 	z-index: -2;
 }
-//solve issue with modal
-.centreImg
-{
-	display: block;
-	height: auto;
-	width: 100%;
-	max-width: 25%;
-	position: absolute;
-	left:0; 
-	right:0;	
-	top:0; 
-	bottom:0;
-	margin:auto;
-	z-index: -3;
-	border-radius: 100%;
-}
+
+//=================================================================================================================//
+
+/* MOBILE VERSION */
 
 @media screen and (max-width: 800px)
 {
@@ -249,24 +285,3 @@ ul li:hover > .goAway
 		border-radius: 100%;
 	}
 }
-
-// @mixin grayscale_element($value) 
-// {
-//     -webkit-filter: #{"grayscale(#{$value})"};
-//     -moz-filter: #{"grayscale(#{$value})"};
-//     filter:#{"grayscale(#{$value})"};
-// }
-
-// .grey-zone
-// {
-// 	@include grayscale_element(100%);
-//     transition: all 200ms ease-in-out;
-//     &:hover {
-//         @include grayscale_element(0);
-//     }
-// }
-
-// .grey-zone:hover
-// {
-// 	filter: none;
-// }

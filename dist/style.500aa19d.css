@@ -4,6 +4,7 @@ body {
   background-color: #ffffff;
 }
 
+/* CONTAINER */
 .container {
   height: 100%;
   width: 100%;
@@ -12,8 +13,42 @@ body {
 .wrapper {
   height: 95vh;
   width: 100%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
+.mobpage {
+  display: none;
+}
+
+.mainpage {
+  display: block;
+}
+
+/* FONT */
+h1 {
+  font-size: 120px;
+  margin-bottom: -50px;
+}
+
+h2 {
+  font-size: 40px;
+  margin-right: 150px;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+span {
+  color: #2fff05;
+}
+
+/* NAVIGATION */
 #nav-grid {
   margin-top: 100px;
   display: grid;
@@ -21,15 +56,6 @@ body {
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
   overflow: hidden;
-}
-
-/* NAVIGATION */
-.mobpage {
-  display: none;
-}
-
-.mainpage {
-  display: block;
 }
 
 nav li {
@@ -44,10 +70,6 @@ nav ul:hover li a {
 nav ul li a:hover {
   opacity: 1;
   color: #c00606;
-}
-
-ul li:hover > .goAway {
-  display: none;
 }
 
 .nav-linkz {
@@ -172,6 +194,20 @@ ul li:hover > .goAway {
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
+.centreImg {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.9;
+  z-index: -99;
+}
+
+/* SPOTLIGHT */
 .focus {
   position: absolute;
   display: block;
@@ -185,21 +221,7 @@ ul li:hover > .goAway {
   z-index: -2;
 }
 
-.centreImg {
-  display: block;
-  height: auto;
-  width: 100%;
-  max-width: 25%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  z-index: -3;
-  border-radius: 100%;
-}
-
+/* MOBILE VERSION */
 @media screen and (max-width: 800px) {
   .mobpage {
     display: block;
