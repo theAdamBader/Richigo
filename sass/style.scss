@@ -32,26 +32,41 @@ body
 
 h1
 {
-	font-size: 120px;
-	margin-bottom: -50px;
+	font-size: 8vw;
+	margin-bottom: -30px;
 }
 
 h2
 {
-	font-size: 40px;
-	margin-right: 150px;
+	font-size: 3vw;
+	margin-right: 80px;
+}
+
+p
+{
+	font-size: 1.2vw;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 h1,
 h2,
-h3
+h3,
+button,
+p
 {
 	text-transform: uppercase;
+	font-family: 'Lato', sans-serif;
 }
 
 span
 {
 	color: #2fff05;
+}
+
+.paragraph
+{
+	color: #000000;
 }
 
 //=================================================================================================================//
@@ -209,14 +224,34 @@ nav ul li a:hover
 	right:0;	
 	top:0; 
 	bottom:0;
-	opacity: 0.9;
-	z-index: -99;
+	z-index: 98;
+}
+
+.aboutClick
+{
+	width: 100%;
+	height: 50%;	
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 99;
+}
+
+button
+{
+	border: 0;
+	padding: 0;
+	background: none;
+	font-size: 2em;
+	text-decoration: none; 
+	cursor: pointer;
 }
 
 //=================================================================================================================//
 
 /* SPOTLIGHT */
-
 .focus
 {
 	position: absolute;
@@ -230,6 +265,44 @@ nav ul li a:hover
 	mix-blend-mode: darken;  
 	z-index: -2;
 }
+
+/* ================================================================================================ */
+
+/* CLOSE BUTTON */
+.close 
+{
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.5;
+  }
+
+  .close:hover 
+  {
+    opacity: 1;
+  }
+
+  .close:before, .close:after 
+  {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: rgb(137, 255, 27);
+  }
+
+  .close:before
+   {
+    transform: rotate(45deg);
+  }
+
+  .close:after 
+  {
+    transform: rotate(-45deg);
+  } 
 
 //=================================================================================================================//
 

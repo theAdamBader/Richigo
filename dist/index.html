@@ -13,6 +13,8 @@
 	<!-- <link href="./css/styles.css" rel="stylesheet"> -->
 	<link href="/style.500aa19d.css" rel="stylesheet">
 
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
 <script src="/cube.085bbc0d.js"></script><script src="/modal-text-box.edd1d511.js"></script><script src="/music-notes.5a9a9341.js"></script><script src="/photo-animation.cebcc9e9.js"></script><script src="/style.500aa19d.js"></script></head>
 <body>
 
@@ -21,17 +23,39 @@
 	<div class="container">
 			
 		<div class="wrapper">
-			<img class="centreImg" src="/ricepudding.cf09446e.jpg" alt="">
-			
-			<h1><span>Richard</span> Wajman</h1>
-			<h2>Games developer, photographer & artist</h2>
+			<div class="imageRemove">
+				<img class="centreImg" src="/mainImage.29b08b78.jpg" alt="">
+				<div class="aboutClick"><button id="myImg">About Me</button></div>
+			</div>
+
+				<!-- center image -->	
+		<div id="myModal" class="modal">
+
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close">&times;</span>
+					<div>
+						<a href="/index.html" class="close"></a>
+						<h1><span>Richard</span> Wajman</h1>
+						<h2>Games developer, photographer & artist</h2>
 		
+						<p class="paragraph">
+							I am a passionate programmer and artist who is interested in the dynamics, 
+							mechanics and aesthetics of a program and its accessibility; a team oriented 
+							programmer who strives to write clean, cache friendly code. I’m always eager to 
+							learn and leverage my skills to facilitate unforgettable gameplay and narrative driven experiences. <br><br>
+							Graduate in BSc Games Programmer at Goldsmiths, University of London. <br><br>
+							Programming languages: C++, C#, Java, HTML5, CSS, SASS, JavaScript and PHP.<br><br>
+							Software skills: Unity, Unreal Engine, Visual Studio, OpenFrameWorks, GameMaker, P5JS, Processing.
+						</p>
+					</div>	
+				</div>
+			</div>
+
 		</div>
-		
-		<!-- center image -->
-				<!-- <div>
-					<img class="centreImg" src="./img/photography/ricepudding.jpg" alt="">
-				</div> -->
+			
+			
+		</div>
 				
 
 		<div class="focus"></div>
@@ -136,56 +160,35 @@
 	</div>
 </div>	
 
-	<div class="mobpage">
-		<img id="myImg" class="centreMobileImg" src="/ricepudding.cf09446e.jpg" alt="">
-		
-		<nav>
-			<div class="row">  
-				<ul id="grid-container">
-					<!-- music -->
-					<li>
-						<a class="nav-linkz one" href="/music.html">MUSIC</a>
-					</li>
-		
-					<!-- 3D modelling -->
-					<li>
-						<a class="nav-linkz two" href="/3danimation.html">3D MODELLING</a>
-					</li>
-		
-					<!-- game design -->
-					<li>
-						<a class="nav-linkz three" href="/gamedesign.html">GAME DESIGN</a>
-					</li>
-		
-					<!-- photography -->
-					<li>
-						<a class="nav-linkz four" href="/photography.html">PHOTOGRAPHY</a>
-					</li>				
-				</ul>
-			</div>
-		</nav>  
-
-		
-			<!-- center image -->	
-			<div id="myModal" class="modal">
+<div class="mobpage">
+	<img class="centreMobileImg" src="/ricepudding.cf09446e.jpg" alt="">
 	
-				<div class="modal-content">
-					<div class="modal-header">
-						<span class="close">&times;</span>
-						<h2>Modal Header</h2>
-					</div>
-					<div class="modal-body">
-						<p>Some text in the Modal Body</p>
-						<p>Some other text...</p>
-					</div>
-					<div class="modal-footer">
-						<h3>Modal Footer</h3>
-					</div>	
-				</div>
-
-			</div>
-		
-	</div>	
+	<nav>
+		<div class="row">  
+			<ul id="grid-container">
+				<!-- music -->
+				<li>
+					<a class="nav-linkz one" href="/music.html">MUSIC</a>
+				</li>
+	
+				<!-- 3D modelling -->
+				<li>
+					<a class="nav-linkz two" href="/3danimation.html">3D MODELLING</a>
+				</li>
+	
+				<!-- game design -->
+				<li>
+					<a class="nav-linkz three" href="/gamedesign.html">GAME DESIGN</a>
+				</li>
+	
+				<!-- photography -->
+				<li>
+					<a class="nav-linkz four" href="/photography.html">PHOTOGRAPHY</a>
+				</li>				
+			</ul>
+		</div>
+	</nav>  	
+</div>	
 
 	<!-- JavaScript/jQuery  -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
