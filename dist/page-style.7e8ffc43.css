@@ -76,7 +76,8 @@ p{color: #000000;}
   .close:hover {
     opacity: 1;
   }
-  .close:before, .close:after {
+  .close:before, .close:after
+  {
     position: absolute;
     left: 15px;
     content: ' ';

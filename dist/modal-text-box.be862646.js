@@ -121,7 +121,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 // Get the modal
 var modal = document.getElementById("myModal"); // Get the button that opens the modal
 
-var btn = document.getElementById("myImg"); // Get the <span> element that closes the modal
+var btn = document.getElementById("theButton"); // Get the <span> element that closes the modal
 
 var span = document.getElementsByClassName("close")[0]; // When the user clicks the button, open the modal 
 
@@ -168,7 +168,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61257" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63322" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
