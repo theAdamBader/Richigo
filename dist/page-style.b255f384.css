@@ -2,29 +2,53 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ffffff;
+  overflow-x: hidden;
 }
 
-p {
-  color: white;
+.container {
+  width: 100%;
+  height: 100%;
 }
 
 .title {
-  font-size: 2em;
+  color: #effd56;
+  font-size: 2.5em;
+  position: absolute;
+  top: 32px;
+  left: 20px;
+  margin: 0;
 }
-.title p {
-  color: white;
+
+.sub-title {
+  font-size: 1.8em;
+  height: auto;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paragraph-container {
+  height: auto;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .top-page {
+  display: block;
   height: 100%;
   width: 100%;
   position: relative;
-  background-color: #2fff05;
+  background-color: #effd56;
   top: 0;
-  left: 0;
+  left: -10px;
   padding: 60px;
   z-index: -1;
   transform: rotate(-1deg);
+}
+
+p {
+  color: #000000;
 }
 
 .strip {
@@ -33,7 +57,7 @@ p {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: #000000;
+  background-color: #51a866;
   padding: 10px;
   transform: rotate(1deg);
 }
@@ -58,7 +82,7 @@ p {
   content: " ";
   height: 33px;
   width: 2px;
-  background-color: #89ff1b;
+  background-color: #effd56;
 }
 
 .close:before {
@@ -72,6 +96,7 @@ p {
 /* ================================================================================================ */
 /* 3D Image Slider */
 .img-container {
+  width: 83%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -80,20 +105,41 @@ p {
 .img-size {
   height: auto;
   width: 100%;
+  margin: auto;
 }
 
-.button {
-  margin-left: 0 3%;
-  width: 2rem;
+/* Next & previous buttons */
+.prev, .next {
   cursor: pointer;
+  position: absolute;
+  width: auto;
+  padding: 16px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 28px;
+  transition: 0.6s ease;
+  align-items: center;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 100px;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 100px;
+  border-radius: 50%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #2fff05;
 }
 
 .button--inactive {
   opacity: 0.2;
-}
-
-.button img {
-  width: 60%;
 }
 
 .cards-wrapper {
@@ -106,20 +152,19 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 25rem;
+  height: 50rem;
+  position: relative;
 }
 
 .box {
-  /*     margin: -1.5rem; */
-  width: 12rem;
-  height: 20rem;
+  width: 100%;
+  height: auto;
   box-shadow: 0px 0px 2rem 0px #888888;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  /* transition: 1s all; */
 }
 
 .box:nth-child(2n) {
@@ -128,14 +173,10 @@ p {
 }
 
 .box:nth-child(2) {
-  left: 5%;
+  left: 8%;
 }
 
-.box:nth-child(4) {
-  left: -5%;
-}
-
-.box:nth-child(4n+1) {
+.box:nth-child(2n+1) {
   transform: scale(0.75);
   z-index: -2;
 }
@@ -144,23 +185,28 @@ p {
   left: 15%;
 }
 
-.box:nth-child(5) {
-  left: -15%;
-}
-
-.card-text-content {
-  text-align: center;
-  width: 75%;
-}
-
-.card-title {
-  padding: 1rem;
-}
-
-.box--hide {
+.hide-box {
   display: none;
 }
 
+@media screen and (max-width: 800px) {
+  .next {
+    right: 0;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .cards-container {
+    height: 20rem;
+  }
+}
 .move-out-from-left {
   animation: moveOutLeft 0.5s ease-in-out;
 }
@@ -216,6 +262,20 @@ p {
   }
   50% {
     transform: scale(0.5) translateX(-150%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0.25) translateX(0%);
+    opacity: 0;
+  }
+}
+@keyframes moveOutRight {
+  0% {
+    transform: scale(0.75) translateX(0%);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.5) translateX(150%);
     opacity: 0.5;
   }
   100% {

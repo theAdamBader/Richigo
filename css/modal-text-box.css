@@ -1,5 +1,5 @@
 /* The Modal (background) */
-.modal 
+/* .modal 
 {
   display: none;
   position: absolute; 
@@ -12,9 +12,8 @@
   background-color: rgba(0,0,0,0.6);
   text-align: center;
   z-index: 99;
-}
+} 
 
-/* Modal Content */
 .modal-content 
 {
   position: relative;
@@ -27,30 +26,6 @@
   animation-duration: 0.4s
 }
 
-.close .modal-content
-{
-  animation-name: animateClose;
-  animation-duration: 0.4s;
-  animation-fill-mode: forwards;
-} 
-
-/* The Close Button */
-.closed 
-{
-  color: white;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.closed:hover,
-.closed:focus 
-{
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 @keyframes animateOpen 
 {
   from {transform:scale(0); opacity:0}
@@ -61,4 +36,4 @@
 {
   from {transform:scale(1); opacity:1}
   to {transform:scale(0); opacity:0}
-}
+} */

@@ -9,17 +9,8 @@
   transform-style: preserve-3d;
   transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);
 
-  -moz-transform-style: preserve-3d;
-  -moz-transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);
-
-  -webkit-transform-style: preserve-3d;
-  -webkit-transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);
-
   animation: cubeRotation 5s infinite;
   transition: all 0.5s ease-in-out;
-
-  -webkit-animation: cubeRotation 5s infinite; /* Safari 4.0 - 8.0 */
-  -webkit-transition: all 0.5s ease-in-out;   
 }
 
 #D3Cube > div {
