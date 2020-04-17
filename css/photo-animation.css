@@ -15,7 +15,27 @@
 	padding: 10px;
 }
   
-  #slideshow > div 
+#slideshow > div 
+{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+}
+
+#slideshowGames
+{
+	position: absolute;
+    top: 45%;
+    left: 48%;
+	transform: translate(-50%, -50%);
+	width: 340px;
+	height: 400px;
+	padding: 10px;
+}
+  
+#slideshowGames > div 
 {
 	position: absolute;
 	top: 10px;
