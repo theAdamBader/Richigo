@@ -10,6 +10,11 @@ body {
   height: 100%;
 }
 
+.text-box {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
 .title {
   color: #effd56;
   font-size: 2.5em;
@@ -17,6 +22,11 @@ body {
   top: 32px;
   left: 20px;
   margin: 0;
+}
+
+.headline {
+  font-size: 3em;
+  text-align: center;
 }
 
 .sub-title {
@@ -45,6 +55,14 @@ body {
   padding: 60px;
   z-index: -1;
   transform: rotate(-1deg);
+}
+
+h1,
+h2,
+h3,
+p {
+  text-transform: uppercase;
+  font-family: "Quicksand", sans-serif;
 }
 
 p {
@@ -152,7 +170,6 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50rem;
   position: relative;
 }
 
