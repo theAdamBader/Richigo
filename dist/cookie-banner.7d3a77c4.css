@@ -1,0 +1,33 @@
+/*COOKIE BANNER*/
+#cookieConsent 
+{
+  background-color: rgba(20,20,20,0.9);
+  min-height: 15%;
+  color: #ffffff;
+  line-height: 1.5em;
+  padding: 8px 0 8px 30px;
+  font-family: 'Quicksand', sans-serif;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  z-index: 9999;
+}
+
+#cookieConsent a.cookieConsentOK 
+{
+  background-color: #427c50;
+  color: #effd56;
+  display: inline-block;
+  border-radius: 15%;
+  padding: 5px 25px;
+  cursor: pointer;
+}
+
+#cookieConsent a.cookieConsentOK:hover 
+{
+  background-color: #51a866;
+}
+
+/*# sourceMappingURL=/cookie-banner.7d3a77c4.css.map */

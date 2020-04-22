@@ -1,5 +1,6 @@
 /* SOCIAL ICONS */
-.social-buttons {
+.social-buttons 
+{
     height: 100%;
     width: 100%;
     display: flex;
@@ -7,47 +8,59 @@
     list-style: none;
 }
 
-.social-icon {
+.social-icon
+{
     display: inline-block;
     border-radius: 100%;
     padding: 20px;
     margin: 40px;
 }
 
-.twitter-colour {
+.twitter-colour 
+{
     color: #00acee;
 }
-.twitter-colour:hover {
+
+.twitter-colour:hover 
+{
     background-color: #00acee;
     color: #ffffff;
 }
 
-.linkedIn-colour {
+.linkedIn-colour 
+{
     color: #0e76a8;
 }
-.linkedIn-colour:hover {
+
+.linkedIn-colour:hover 
+{
     background-color: #0e76a8;
     color: #ffffff;
 }
 
-.gitHub-colour {
+.gitHub-colour 
+{
     color: #6e5494;
 }
-.gitHub-colour:hover {
+
+.gitHub-colour:hover 
+{
     background-color: #6e5494;
     color: #ffffff;
 }
 
-@media screen and (max-width: 800px) {
-    .social-buttons {
-        font-size: 2vw;
-        display: flex;
+@media screen and (max-width: 900px) 
+{
+    .social-buttons 
+    {
+        font-size: 2.5vw;
+        width: 80%;
     }
 
-    .social-icon {
+    .social-icon 
+    {
         display: inline-block;
         border-radius: 100%;
-        padding: 15px;
         margin: 10px;
     }
 }

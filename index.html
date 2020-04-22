@@ -8,8 +8,10 @@
 
 	<!-- CSS -->
 	<link href="./css/cube.css" rel="stylesheet">
-	<link href="./css/music-notes.css" rel="stylesheet">
 	<link href="./css/photo-animation.css" rel="stylesheet">
+	<link href="./css/cookie-banner.css" rel="stylesheet">
+	<link href="./css/music-notes.css" rel="stylesheet">
+	<link href="./css/pre-loader.css" rel="stylesheet">
 	<link href="./css/social-icons.css" rel="stylesheet">
 	<link href="./sass/style.scss" rel="stylesheet">
 
@@ -19,6 +21,18 @@
 
 </head>
 <body>
+
+<div class="loader">
+	<div class="loader-inner">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</div>
 
 <!-- DESKTOP VERSION -->
 <div class="mainpage">
@@ -42,8 +56,8 @@
 					<div class="modal-header">
 						<span id="close"></span>
 						<div>
-							<h1><span>Richard</span> Wajman</h1>
-							<h2>Games developer, photographer & artist</h2>
+							<h1 class="title"><span>Richard</span> Wajman</h1>
+							<h2 class="sub-title">Games developer, photographer & artist</h2>
 			
 							<p class="paragraph">
 								I am a passionate programmer and artist who is interested in the dynamics, 
@@ -185,41 +199,64 @@
 
 <!-- MOBILE VERSION -->
 <div class="mobpage">
+
+	<div id="cookieConsent">
+		<p>	Enjoy the experience more on desktop </p>
+		<a class="cookieConsentOK">OK</a>
+	</div>
+
 	<img class="centre-mobile-img" src="./img/ricepudding.jpg" alt="">
+	<label> 
+		<input type="checkbox">
+		<span class="menu"> <span class="hamburger"></span> </span>
+		<ul>
+			<li>
+				<a href="./music.html">MUSIC</a>
+			</li>
+			<li>
+				<a href="./3danimation.html">3D MODELLING</a>
+			</li>
+			<li>
+				<a href="./gamedesign.html">GAME DESIGN</a>
+			</li>
+			<li>
+				<a href="./photography.html">PHOTOGRAPHY</a>
+			</li>				
+		</ul>
+	</label>
+
+	<div>
+		<h1 class="title-mob"><span>Richard</span> Wajman</h1>
+		<h2 class="sub-title-mob">Games developer, photographer & artist</h2>
+		<br>
+		<p class="paragraph-mob">
+			I am a passionate programmer and artist who is interested in the dynamics, 
+			mechanics and aesthetics of a program and its accessibility; a team oriented 
+			programmer who strives to write clean, cache friendly code. I’m always eager to 
+			learn and leverage my skills to facilitate unforgettable gameplay and narrative driven experiences. <br><br>
+			Graduate in BSc Games Programmer at Goldsmiths, University of London. <br><br>
+			Programming languages: C++, C#, Java, HTML5, CSS, SASS, JavaScript and PHP.<br><br>
+			Software skills: Unity, Unreal Engine, Visual Studio, OpenFrameWorks, GameMaker, P5JS, Processing.
+		</p>
 	
-	<nav>
-		<div class="row">  
-			<ul id="grid-container">
-				<!-- music -->
-				<li>
-					<a class="nav-linkz one" href="./music.html">MUSIC</a>
-				</li>
-	
-				<!-- 3D modelling -->
-				<li>
-					<a class="nav-linkz two" href="./3danimation.html">3D MODELLING</a>
-				</li>
-	
-				<!-- game design -->
-				<li>
-					<a class="nav-linkz three" href="./gamedesign.html">GAME DESIGN</a>
-				</li>
-	
-				<!-- photography -->
-				<li>
-					<a class="nav-linkz four" href="./photography.html">PHOTOGRAPHY</a>
-				</li>				
-			</ul>
-		</div>
-	</nav>  	
+		<ul class="social-buttons">
+			<li><a href="https://twitter.com/AdamBader25" target="_blank" class="social-icon linkedIn-colour"><i class="fab fa-twitter fa-3x"></i></a>
+			</li>
+			<li><a href="https://www.linkedin.com/in/adam-bader-a8933788/" target="_blank" class="social-icon linkedIn-colour"><i class="fab fa-linkedin-in fa-3x"></i></a>
+			</li> 
+			<li><a href="https://www.github.com/TheAdamBader" target="_blank" class="social-icon gitHub-colour"><i class="fab fa-github fa-3x"></i></a>
+			</li> 
+		</ul>
+	</div>	
 </div>	
 
 	<!-- JavaScript/jQuery  -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-	<script type="text/javascript" src="./js/animation-transition.js"></script>
 	<script type="text/javascript" src="./js/modal-text-box.js"></script>
 	<script type="text/javascript" src="./js/design-animation.js"></script>
+	<!-- <script type="text/javascript" src="./js/hamburger.js"></script> -->
 	<script type="text/javascript" src="./js/photo-animation.js"></script>
+	<script type="text/javascript" src="./js/pre-loader.js"></script>
 	<script type="text/javascript" src="./js/scroll-down.js"></script>
 	<script type="text/javascript" src="./js/spotlight.js"></script>
 </body>

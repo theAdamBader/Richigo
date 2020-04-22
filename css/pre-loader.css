@@ -1,0 +1,128 @@
+.loader 
+{
+    height: auto;
+    width: 100%;
+    background: #000000;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    position: fixed;
+    z-index: 99999;
+    transform: scale(3);
+}
+  
+.loader-inner
+{
+    position: absolute;
+    left: 47.8%;
+    top: 55%;
+}
+  
+.loader-inner span
+{
+      display:block;
+      bottom:0px;
+      width: 9px;
+      height: 5px;
+      background:#51a866;
+      position:absolute;
+      -webkit-animation: wave-band 1.8s  infinite ease-in-out;
+      -moz-animation: wave-band 1.8s  infinite ease-in-out;
+      animation: wave-band 1.8s  infinite ease-in-out;
+}
+   
+.loader-inner span:nth-child(2)
+{
+    left:11px;
+    -webkit-animation-delay: .2s;
+    -moz-animation-delay: .2s;
+    animation-delay: .2s;
+}
+  
+.loader-inner span:nth-child(3)
+{
+    left:22px;
+    -webkit-animation-delay: .4s;
+    -moz-animation-delay: .4s;
+    animation-delay: .4s;
+}
+  
+.loader-inner span:nth-child(4)
+{
+    left:33px;
+    -webkit-animation-delay: .6s;
+    -moz-animation-delay: .6s;
+    animation-delay: .6s;
+}
+  
+.loader-inner span:nth-child(5)
+{
+    left:44px;
+    -webkit-animation-delay: .8s;
+    -moz-animation-delay: .8s;
+    animation-delay: .8s;
+}
+
+.loader-inner span:nth-child(6)
+{
+    left:55px;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.loader-inner span:nth-child(7)
+{
+    left:66px;
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+
+/*=================================================================================================================*/
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px)
+{
+    .loader
+    {
+        left: 0;
+        transform: scale(1.5);
+    }
+
+    .loader-inner
+    {
+        position: absolute;
+        left: 43%;
+        top: 55%;
+    }
+}
+
+/*=================================================================================================================*/
+
+/* ANIMATION */
+@-moz-keyframes wave-band
+{
+    0% {height:5px;transform:translateY(0px);background:#51a866;}
+    25% {height:90px;transform:translateY(0);background:#effd56;}
+    50% {height:5px;transform:translateY(0px);background:#51a866;}
+    100% {height:5px;transform:translateY(0px);background:#51a866;}
+}
+  
+@-webkit-keyframes wave-band
+{
+    0% {height:5px;transform:translateY(0px);background:#51a866;}
+    25% {height:90px;transform:translateY(0);background:#effd56;}
+    50% {height:5px;transform:translateY(0px);background:#51a866;}
+    100% {height:5px;transform:translateY(0px);background:#51a866;}
+}
+  
+@keyframes wave-band
+{
+      0% {height:5px;transform:translateY(0px);background:#51a866;}
+      25% {height:90px;transform:translateY(0);background:#effd56;}
+      50% {height:5px;transform:translateY(0px);background:#51a866;}
+      100% {height:5px;transform:translateY(0px);background:#51a866;}
+}
