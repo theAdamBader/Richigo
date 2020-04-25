@@ -128,6 +128,13 @@ $(document).ready(function () {
         scrollTop: $(hash).offset().top
       }, 800, function () {});
     }
+
+    $('#arrow-up').click(function () {
+      $('html, body').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
+    });
   });
 });
 },{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -158,7 +165,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53159" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64794" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

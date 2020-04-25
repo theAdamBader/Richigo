@@ -137,7 +137,6 @@ p{color: #000000;}
   margin: auto;
 }
 
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -150,7 +149,6 @@ p{color: #000000;}
   align-items: center;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 100px;
   border-radius: 50%;
@@ -161,7 +159,6 @@ p{color: #000000;}
   border-radius: 50%;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
   color: #2fff05;
@@ -186,7 +183,8 @@ p{color: #000000;}
   position: relative;
 }
   
-.box {
+.box 
+{
   width: 100%;
   height: auto;
   box-shadow: 0px 0px 2rem 0px #888888;
@@ -197,25 +195,30 @@ p{color: #000000;}
   position: relative;
 }
 
-.box:nth-child(2n) {
+.box:nth-child(2n) 
+{
   transform: scale(0.85);
   z-index: -1;
 }
 
-.box:nth-child(2) {
+.box:nth-child(2)
+{
 left: 8%;
 }
 
-.box:nth-child(2n + 1) {
+.box:nth-child(2n + 1) 
+{
   transform: scale(0.75);
   z-index: -2;
 }
 
-.box:nth-child(1) {
+.box:nth-child(1) 
+{
 left: 15%;
 }
 
-.hide-box {
+.hide-box 
+{
   display: none;
 }
 
@@ -243,36 +246,44 @@ left: 15%;
   }
 }
 
-.move-out-from-left {
+.move-out-from-left 
+{
   animation: moveOutLeft 0.5s ease-in-out;
 }
 
-.move-out-from-right {
+.move-out-from-right 
+{
   animation: moveOutRight 0.5s ease-in-out;
 }
 
-.move-to-position5-from-left {
+.move-to-position5-from-left 
+{
   animation: moveToP5Left 0.5s ease-in-out;
 }
 
-.move-to-position4-from-left {
+.move-to-position4-from-left 
+{
   animation: moveToP4Left 0.5s ease-in-out;
 }
 
-.move-to-position3-from-left {
+.move-to-position3-from-left 
+{
   animation: moveToP3Left 0.5s ease-in-out;
 }
 
-.move-to-position2-from-left {
+.move-to-position2-from-left 
+{
   animation: moveToP2Left 0.5s ease-in-out;
 }
 
 
-.move-to-position1-from-left{
+.move-to-position1-from-left
+{
   animation: moveToP1Left 0.5s ease-in-out;
 }
 
-.move-to-position5-from-right{
+.move-to-position5-from-right
+{
   animation: moveToP5Right 0.5s ease-in-out;
 }
 
@@ -280,15 +291,18 @@ left: 15%;
   animation: moveToP4Right 0.5s ease-in-out;
 }
 
-.move-to-position3-from-right{
+.move-to-position3-from-right
+{
   animation: moveToP3Right 0.5s ease-in-out;
 }
 
-.move-to-position2-from-right{
+.move-to-position2-from-right
+{
   animation: moveToP2Right 0.5s ease-in-out;
 }
 
-.move-to-position1-from-right{
+.move-to-position1-from-right
+{
   animation: moveToP1Right 0.5s ease-in-out;
 }
   
@@ -307,7 +321,6 @@ left: 15%;
   }
 }
 
-
 @keyframes moveOutRight {
   0% {
       transform: scale(0.75) translateX(0%);
@@ -321,4 +334,10 @@ left: 15%;
       transform: scale(0.25) translateX(0%);
       opacity: 0;
   }
+}
+
+@media screen and (max-width: 900px)
+{
+  .title {font-size: 2em;}
+  .headline {font-size: 2em;}
 }

@@ -4,84 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Richard Wajman | Game Design</title>
 
     <!-- CSS -->
     <link href="./sass/page-style.scss" rel="stylesheet">
+    <link href="./css/pre-loader.css" rel="stylesheet">
+    
+	<!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
 </head>
 <body>
+    <div class="loader">
+        <div class="loader-inner">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+<div class="container">
     <a href="./index.html" class="close"></a>
+
     <div class="top-page">
         <div class="strip"> 
             <p class="title">GAME DESIGN</p>
         </div>
     </div>
 
+
     <div class="img-container">
         <div class="cards-wrapper">
             <ul class="cards-container">
                 <li class="box">
-                    <img class="img-size" src="./img/photography/2.jpg" alt="">
-                </li>
-                <li class="box">
                     <img class="img-size" src="./img/photography/1.jpg" alt="">
                 </li>
                 <li class="box">
                     <img class="img-size" src="./img/photography/2.jpg" alt="">
+                </li>
+                <li class="box">
+                    <img class="img-size" src="./img/photography/3.jpg" alt="">
                 </li>
                 <li class="box hide-box">
-                    <img class="img-size" src="./img/photography/1.jpg" alt="">
+                    <img class="img-size" src="./img/photography/4.jpg" alt="">
                 </li>
                 <li class="box  hide-box">
-                    <img class="img-size" src="./img/photography/2.jpg" alt="">
+                    <img class="img-size" src="./img/photography/5.jpg" alt="">
                 </li>
-                <li class="box hide-box">box 6</li>
-                <li class="box hide-box">box 7</li>
+                <li class="box hide-box">
+                    <img class="img-size" src="./img/photography/6.jpg" alt="">
+                </li>
+                <li class="box  hide-box">
+                    <img class="img-size" src="./img/photography/7.jpg" alt="">
+                </li> 
+                <li class="box hide-box">
+                    <img class="img-size" src="./img/photography/8.jpg" alt="">
+                </li>
+                <li class="box  hide-box">
+                    <img class="img-size" src="./img/photography/9.jpg" alt="">
+                </li> 
+                <li class="box hide-box">
+                    <img class="img-size" src="./img/photography/10.jpg" alt="">
+                </li>
+                <li class="box  hide-box">
+                    <img class="img-size" src="./img/photography/11.jpg" alt="">
+                </li> 
+                <li class="box hide-box">
+                    <img class="img-size" src="./img/photography/12.jpg" alt="">
+                </li>
+                <li class="box  hide-box">
+                    <img class="img-size" src="./img/photography/13.jpg" alt="">
+                </li>
             </ul>
         </div>
         <div class="prev" onclick="shiftLeft()">&#10094;</div>
         <div class="next" onclick="shiftRight()">&#10095;</div>
     </div>
 
-    <br><br>
+    <div class="text-box">
+        <h1 class="headline">TITLE</h1>
 
-    <div class="sub-title">
-        Lorem Ipsum
+        <div class="sub-title">
+            Lorem Ipsum
+        </div>
+        <div class="paragraph-container">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        </div>
+        <br>
+        <div class="sub-title">
+            Lorem Ipsum
+        </div>
+        <div class="paragraph-container">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        </div>
+        <br>
+        <div class="sub-title">
+            Lorem Ipsum
+        </div>
+        <div class="paragraph-container">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        </div>
     </div>
-
-    <div class="paragraph-container">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-             enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-    </div>
-    <br>
-
-    <div class="sub-title">
-        Lorem Ipsum
-    </div>
-
-    <div class="paragraph-container">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-             enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-    </div>
-
-    <br>
-    <div class="sub-title">
-        Lorem Ipsum
-    </div>
-    <div class="paragraph-container">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-             enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-    </div>
+</div>
 
   	<!-- JavaScript/jQuery  -->
-      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-      <script type="text/javascript" src="./js/img-slider.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="./js/img-slider.js"></script>
+    <script type="text/javascript" src="./js/pre-loader.js"></script>
+    
 
 </body>
 </html>

@@ -127,7 +127,6 @@ p {
   margin: auto;
 }
 
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -140,7 +139,6 @@ p {
   align-items: center;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 100px;
   border-radius: 50%;
@@ -151,7 +149,6 @@ p {
   border-radius: 50%;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
   color: #2fff05;
@@ -299,6 +296,15 @@ p {
   100% {
     transform: scale(0.25) translateX(0%);
     opacity: 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  .title {
+    font-size: 2em;
+  }
+
+  .headline {
+    font-size: 2em;
   }
 }
 
