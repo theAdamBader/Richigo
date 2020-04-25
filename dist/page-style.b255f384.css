@@ -113,7 +113,7 @@ p {
 }
 
 /* ================================================================================================ */
-/* 3D Image Slider */
+/* 3D IMAGE SLIDER */
 .img-container {
   width: 83%;
   display: flex;
@@ -204,7 +204,13 @@ p {
   display: none;
 }
 
+/* ================================================================================================ */
+/* MOBILE VERSION */
 @media screen and (max-width: 800px) {
+  .img-size {
+    transform: scale(2.5);
+  }
+
   .next {
     right: 0;
   }
@@ -220,6 +226,14 @@ p {
 
   .cards-container {
     height: 20rem;
+  }
+
+  .title {
+    font-size: 2em;
+  }
+
+  .headline {
+    font-size: 2em;
   }
 }
 .move-out-from-left {
@@ -296,15 +310,6 @@ p {
   100% {
     transform: scale(0.25) translateX(0%);
     opacity: 0;
-  }
-}
-@media screen and (max-width: 900px) {
-  .title {
-    font-size: 2em;
-  }
-
-  .headline {
-    font-size: 2em;
   }
 }
 
