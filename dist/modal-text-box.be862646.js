@@ -118,6 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/modal-text-box.js":[function(require,module,exports) {
+//MODAL BOX
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("theButton");
 var cls = document.getElementById("close");
@@ -147,6 +148,36 @@ $(document).ready(function () {
   $("#closeCookieConsent, .cookieConsentOK").click(function () {
     $("#cookieConsent").fadeOut(200);
   });
+}); //SCROLL FUNCTION
+
+$(document).ready(function () {
+  $("a").on('click', function (event) {
+    var hash = this.hash;
+
+    if (this.hash !== "") {
+      event.preventDefault();
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function () {});
+    }
+
+    $('#arrow-up').click(function () {
+      $('html, body').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
+    });
+  });
+}); //SPOTLIGHT EFFECT
+
+var spotlightEle = document.querySelector('.focus');
+document.addEventListener('mousemove', function (e) {
+  var coords = {
+    x: e.clientX,
+    y: e.clientY
+  };
+  spotlightEle.style.setProperty('--x', "".concat(coords.x, "px"));
+  spotlightEle.style.setProperty('--y', "".concat(coords.y, "px"));
 });
 },{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -176,7 +207,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64978" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50930" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

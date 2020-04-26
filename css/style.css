@@ -60,6 +60,8 @@ body {
     margin-left: auto;
   }
   
+  /* ================================================================================================ */
+
   /* NAVIGATION */
   #nav-grid {
     margin-top: 100px;
@@ -237,6 +239,7 @@ body {
     cursor: pointer;
   }
   
+  /* ================================================================================================ */
   /* SPOTLIGHT */
   .focus {
     position: absolute;
@@ -284,6 +287,7 @@ body {
     animation: animateClose 0.6s forwards;
   }
   
+  /* ================================================================================================ */
   /* MODAL BOX */
   .modal {
     display: none;
@@ -331,6 +335,60 @@ body {
       opacity: 0;
     }
   }
+
+  /* ================================================================================================ */
+  /* SOCIAL ICONS */
+.social-buttons 
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.social-icon
+{
+    display: inline-block;
+    border-radius: 100%;
+    padding: 20px;
+    margin: 40px;
+}
+
+.twitter-colour 
+{
+    color: #00acee;
+}
+
+.twitter-colour:hover 
+{
+    background-color: #00acee;
+    color: #ffffff;
+}
+
+.linkedIn-colour 
+{
+    color: #0e76a8;
+}
+
+.linkedIn-colour:hover 
+{
+    background-color: #0e76a8;
+    color: #ffffff;
+}
+
+.gitHub-colour 
+{
+    color: #6e5494;
+}
+
+.gitHub-colour:hover 
+{
+    background-color: #6e5494;
+    color: #ffffff;
+}
+
+/* ================================================================================================ */
   /* SCROLLING DOWN */
   /* REFERENCE TO THE ARROWS IS: https://codepen.io/nxworld/pen/OyRrGy */
   .arrow-position a {
@@ -442,6 +500,8 @@ body {
       opacity: 0;
     }
   }
+
+  /* ================================================================================================ */
   /* MOBILE VERSION */
   @media screen and (max-width: 900px) {
     .mobpage {
@@ -593,4 +653,50 @@ body {
       color: #000000;
       text-decoration: none;
     }
+
+    /*SOCIAL ICONS*/
+    .social-buttons 
+    {
+        font-size: 2.5vw;
+        width: 80%;
+    }
+
+    .social-icon 
+    {
+        display: inline-block;
+        border-radius: 100%;
+        margin: 10px;
+    }
+
+    /*COOKIE BANNER*/
+#cookieConsent 
+{
+  background-color: rgba(20,20,20,0.9);
+  min-height: 15%;
+  color: #ffffff;
+  line-height: 1.5em;
+  padding: 8px 0 8px 30px;
+  font-family: 'Quicksand', sans-serif;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  z-index: 9999;
+}
+
+#cookieConsent a.cookieConsentOK 
+{
+  background-color: #427c50;
+  color: #effd56;
+  display: inline-block;
+  border-radius: 15%;
+  padding: 5px 25px;
+  cursor: pointer;
+}
+
+#cookieConsent a.cookieConsentOK:hover 
+{
+  background-color: #51a866;
+}
   }
