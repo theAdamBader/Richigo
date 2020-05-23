@@ -55,6 +55,7 @@ body {
   .paragraph {
     color: #000000;
     width: 80%;
+    line-height: 1.75rem;
     font-size: 1.2vw;
     margin-right: auto;
     margin-left: auto;

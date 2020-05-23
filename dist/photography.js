@@ -117,107 +117,74 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/javascript.js":[function(require,module,exports) {
-//MODAL BOX
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("theButton");
-var cls = document.getElementById("close");
+})({"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
 
-btn.onclick = function () {
-  modal.style.display = "block";
-
-  if (!modal.classList.contains('theButton')) {
-    modal.classList.add('openAnimation');
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
   }
 
-  modal.classList.remove('closeAnimation');
-};
+  return bundleURL;
+}
 
-cls.onclick = function () {
-  if (!modal.classList.contains('closeAnimation')) {
-    modal.classList.add('closeAnimation');
-  }
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
 
-  modal.classList.remove('openAnimation');
-};
-
-$(document).ready(function () {
-  setTimeout(function () {
-    $("#cookieConsent").fadeIn(200);
-  }, 4000);
-  $("#closeCookieConsent, .cookieConsentOK").click(function () {
-    $("#cookieConsent").fadeOut(200);
-  });
-}); //SCROLL FUNCTION
-
-$(document).ready(function () {
-  $("a").on('click', function (event) {
-    var hash = this.hash;
-
-    if (this.hash !== "") {
-      event.preventDefault();
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function () {});
+    if (matches) {
+      return getBaseURL(matches[0]);
     }
+  }
 
-    $('#arrow-up').click(function () {
-      $('html, body').animate({
-        scrollTop: 0
-      }, 800);
-      return false;
-    });
-  });
-}); //SPOTLIGHT EFFECT
+  return '/';
+}
 
-var spotlightEle = document.querySelector('.focus');
-document.addEventListener('mousemove', function (e) {
-  var coords = {
-    x: e.clientX,
-    y: e.clientY
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
   };
-  spotlightEle.style.setProperty('--x', "".concat(coords.x, "px"));
-  spotlightEle.style.setProperty('--y', "".concat(coords.y, "px"));
-}); //IMAGE SLIDER
 
-function shiftLeft() {
-  var boxes = document.querySelectorAll(".box");
-  var tmpNode = boxes[0];
-  boxes[0].className = "box move-out-from-left";
-  setTimeout(function () {
-    if (boxes.length > 3) {
-      tmpNode.classList.add("hide-box");
-      boxes[3].className = "box move-to-position3-from-left";
-    }
-
-    boxes[1].className = "box move-to-position1-from-left";
-    boxes[2].className = "box move-to-position2-from-left";
-    boxes[0].remove();
-    document.querySelector(".cards-container").appendChild(tmpNode);
-  }, 500);
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
 }
 
-function shiftRight() {
-  var boxes = document.querySelectorAll(".box");
-  boxes[2].className = "box move-out-from-right";
-  setTimeout(function () {
-    var noOfCards = boxes.length;
+var cssTimeout = null;
 
-    if (noOfCards > 2) {
-      boxes[2].className = "box hide-box";
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
     }
 
-    var tmpNode = boxes[noOfCards - 1];
-    tmpNode.classList.remove("hide-box");
-    boxes[noOfCards - 1].remove();
-    var parentObj = document.querySelector(".cards-container");
-    parentObj.insertBefore(tmpNode, parentObj.firstChild);
-    tmpNode.className = "box move-to-position1-from-right";
-    boxes[0].className = "box move-to-position2-from-right";
-    boxes[1].className = "box move-to-position3-from-right";
-  }, 500);
+    cssTimeout = null;
+  }, 50);
 }
-},{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -245,7 +212,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64055" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50669" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -421,5 +388,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/javascript.js"], null)
-//# sourceMappingURL=/javascript.d7fc672b.js.map
+},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/photography.js.map

@@ -132,7 +132,28 @@ $(document).ready(function () {
 
   setTimeout(function () {
     $('.loader').fadeToggle();
-  }, 3000);
+  }, 3000); //FLEXBOX IMAGES    
+
+  var $overlay = $("<div id='light-box'><span class='close-img'>&times</span></div>");
+  var $image = $('<img>');
+  var $caption = $('<h3></h3>');
+  var imageUrl;
+  var imageAlt;
+  $('body').append($overlay);
+  $overlay.hide();
+  $('.flex-img').click(function () {
+    imageUrl = $(this).attr('src');
+    imageAlt = $(this).attr('alt');
+    $overlay.append($image);
+    $overlay.append($caption);
+    $image.attr('src', imageUrl);
+    $caption.text(imageAlt);
+    $overlay.fadeIn('500');
+    $image.fadeIn('500');
+  });
+  $("body").on("click", "#light-box span", function () {
+    $("#light-box").hide();
+  });
 });
 },{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -162,7 +183,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51117" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64055" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
