@@ -8,26 +8,25 @@
 
 .row {
     display: flex;
-    justify-content: center;
+    display: -ms-flexbox;
     flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    justify-content: center;
     padding: 10px 20px;
-    -ms-flex-wrap: wrap; /* IE10 */
-    display: -ms-flexbox; /* IE10 */
     align-content: center;
   }
   
-  /* Create four equal columns that sits next to each other */
   .column {
-    -ms-flex: 25%; /* IE10 */
     flex: 15%;
+    -ms-flex: 25%;
     max-width: 15%;
     padding: 0 4px;
   }
   
   .column img {
     margin-top: 8px;
-    /* vertical-align: middle; */
     width: 100%;
+    cursor: pointer;
   }
   
   #light-box {
@@ -96,4 +95,7 @@
       flex: 100%;
       max-width: 100%;
     }
+
+    .close-img{margin: 10px;}
+    #light-box h3{bottom:15%}
   }  
