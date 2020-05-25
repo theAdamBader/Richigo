@@ -356,37 +356,37 @@ body {
     margin: 40px;
 }
 
+.fb-colour 
+{
+  color: #3b5998;
+}
+
+.fb-colour:hover 
+{
+  background-color: #3b5998;
+  color: #fff;
+}
+
 .twitter-colour 
 {
-    color: #00acee;
+  color: #00acee;
 }
 
 .twitter-colour:hover 
 {
-    background-color: #00acee;
-    color: #ffffff;
+  background-color: #00acee;
+  color: #fff;
 }
 
 .linkedIn-colour 
 {
-    color: #0e76a8;
+  color: #0e76a8;
 }
 
 .linkedIn-colour:hover 
 {
-    background-color: #0e76a8;
-    color: #ffffff;
-}
-
-.gitHub-colour 
-{
-    color: #6e5494;
-}
-
-.gitHub-colour:hover 
-{
-    background-color: #6e5494;
-    color: #ffffff;
+  background-color: #0e76a8;
+  color: #fff;
 }
 
 /* ================================================================================================ */

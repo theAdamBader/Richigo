@@ -120,6 +120,18 @@ p{color: #000000;}
 
 /* ================================================================================================ */
 
+/*SOUNDCLOUD CONTAINER*/
+.music-lets-you-lose-control{
+  padding: 20px 0;
+  max-width: 60%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background: #51a866;
+}
+
+/* ================================================================================================ */
+
 /* 3D IMAGE SLIDER */
 .img-container 
 {
@@ -219,6 +231,16 @@ left: 15%;
 .hide-box 
 {
   display: none;
+}
+
+figcaption {
+  width: 100%;
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  padding: 2px;
+  text-align: center;
+  bottom: 0;
 }
 
 /* ================================================================================================ */

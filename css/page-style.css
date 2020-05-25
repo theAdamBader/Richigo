@@ -113,6 +113,73 @@ p {
 }
 
 /* ================================================================================================ */
+
+/*SOUNDCLOUD CONTAINER*/
+.music-lets-you-lose-control{
+  padding: 4px 0;
+  border-radius: 1%;
+  max-width: 60%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background: #51a866;
+}
+
+.music-lets-you-lose-control iframe{
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  border: 0;
+}
+
+.music-row{
+  display: flex;
+  display: -ms-flexbox;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+}
+
+.music-column{
+  flex: 50%;
+  -ms-flex: 50%;
+  max-width: 49%;
+  padding: 0 4px;
+}
+
+.social-buttons 
+{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  font-size: 3em;
+}
+
+.social-icon
+{
+  padding: 1%;
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  border-radius: 30px;
+  margin: 0 5%;
+  text-align: center;
+}
+
+.soundcloud-colour 
+{
+  background-color: #000;
+  color: #ff7700;
+  transition: ease-in-out 1s;
+}
+
+.soundcloud-colour:hover 
+{
+  background-color: #ff7700;
+  color: #ffffff;
+  width: 240px;
+}
+
+/* ================================================================================================ */
 /* 3D IMAGE SLIDER */
 .img-container {
   width: 83%;
@@ -206,6 +273,16 @@ p {
   display: none;
 }
 
+figcaption {
+  width: 100%;
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  padding: 2px;
+  text-align: center;
+  bottom: 0;
+}
+
 /* ================================================================================================ */
 /* MOBILE VERSION */
 @media screen and (max-width: 800px) {
@@ -233,6 +310,8 @@ p {
   .title {
     font-size: 2em;
   }
+
+  .sub-title{font-size: 1.3em;}
 
   .headline {
     font-size: 2em;
