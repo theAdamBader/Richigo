@@ -27,7 +27,7 @@ $(document).ready(function(){
   //FOR PRE-LOADER
   setTimeout(function(){
     $('.loader').fadeToggle();
-  }, 3000);
+  }, 1500);
 
   //FLEXBOX IMAGES    
   var $overlay	= $("<div id='light-box'><span class='close-img'>&times</span></div>");

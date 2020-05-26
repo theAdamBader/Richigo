@@ -132,7 +132,7 @@ $(document).ready(function () {
 
   setTimeout(function () {
     $('.loader').fadeToggle();
-  }, 3000); //FLEXBOX IMAGES    
+  }, 1500); //FLEXBOX IMAGES    
 
   var $overlay = $("<div id='light-box'><span class='close-img'>&times</span></div>");
   var $image = $('<img>');
@@ -183,7 +183,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62986" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56769" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
