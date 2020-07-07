@@ -55,3 +55,35 @@ $(document).ready(function(){
     $("#light-box").hide();
   });
 });
+
+
+$(document).ready(function(){   
+  setTimeout(function () {
+      $("#cookieConsent").fadeIn(200);
+   }, 4000);
+  $("#closeCookieConsent, .cookieConsentOK").click(function() {
+      $("#cookieConsent").fadeOut(200);
+  }); 
+}); 
+
+//SCROLL FUNCTION
+$(document).ready(function(){
+
+  $("a").on('click', function(event) {
+  
+      var hash = this.hash;
+
+      if (this.hash !== "") {
+          event.preventDefault();
+          $('html, body').animate({
+              scrollTop: $(hash).offset().top
+          }, 800, function(){
+          });
+      }
+
+      $('#arrow-up').click(function(){
+          $('html, body').animate({scrollTop : 0},800);
+          return false;
+      });
+  });
+});
