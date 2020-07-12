@@ -150,45 +150,7 @@ document.addEventListener('mousemove', function (e) {
   };
   spotlightEle.style.setProperty('--x', "".concat(coords.x, "px"));
   spotlightEle.style.setProperty('--y', "".concat(coords.y, "px"));
-}); //IMAGE SLIDER
-
-function shiftLeft() {
-  var boxes = document.querySelectorAll(".box");
-  var tmpNode = boxes[0];
-  boxes[0].className = "box move-out-from-left";
-  setTimeout(function () {
-    if (boxes.length > 3) {
-      tmpNode.classList.add("hide-box");
-      boxes[3].className = "box move-to-position3-from-left";
-    }
-
-    boxes[1].className = "box move-to-position1-from-left";
-    boxes[2].className = "box move-to-position2-from-left";
-    boxes[0].remove();
-    document.querySelector(".cards-container").appendChild(tmpNode);
-  }, 500);
-}
-
-function shiftRight() {
-  var boxes = document.querySelectorAll(".box");
-  boxes[2].className = "box move-out-from-right";
-  setTimeout(function () {
-    var noOfCards = boxes.length;
-
-    if (noOfCards > 2) {
-      boxes[2].className = "box hide-box";
-    }
-
-    var tmpNode = boxes[noOfCards - 1];
-    tmpNode.classList.remove("hide-box");
-    boxes[noOfCards - 1].remove();
-    var parentObj = document.querySelector(".cards-container");
-    parentObj.insertBefore(tmpNode, parentObj.firstChild);
-    tmpNode.className = "box move-to-position1-from-right";
-    boxes[0].className = "box move-to-position2-from-right";
-    boxes[1].className = "box move-to-position3-from-right";
-  }, 500);
-}
+});
 },{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -217,7 +179,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58583" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53289" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
