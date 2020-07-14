@@ -11,7 +11,7 @@ body {
 }
 
 .wrapper {
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   margin-top: 50px;
   margin-left: auto;
@@ -43,12 +43,12 @@ span {
 }
 
 .title {
-  font-size: 8vw;
+  font-size: 80px;
   margin-bottom: -30px;
 }
 
 .sub-title {
-  font-size: 3vw;
+  font-size: 50px;
   margin-right: 70px;
 }
 
@@ -59,6 +59,11 @@ span {
   font-size: 1.2vw;
   margin-right: auto;
   margin-left: auto;
+}
+
+.bold{
+  color: #000000;
+  font-weight: 600;
 }
 
 /* ================================================================================================ */
@@ -228,16 +233,39 @@ nav ul li a:hover {
 }
 
 /* ================================================================================================ */
-.centre-img {
+.right-img {
   display: block;
-  height: 100%;
-  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-20%, 2%);
+  z-index: -1;
+}
+
+.left-img {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(20%, 12%);
+}
+
+svg{
   position: absolute;
   left: 0;
-  right: 0;
+  z-index: -1;
+}
+
+.rect-background{
+  position: absolute;
   top: 0;
-  bottom: 0;
-  z-index: -98;
+  transform: translateY(78%);
+  fill: rgb(81, 168, 102, 0.8);
+  z-index: -1;
 }
 
 .about-btn {
@@ -314,8 +342,8 @@ button {
   position: relative;
   background-color: #fefefe;
   margin: auto;
-  height: 100vh;
-  padding: 0;
+  height: 100%;
+  padding: 50px 0;
   border: 1px solid #888;
 }
 
@@ -348,52 +376,61 @@ button {
   /* SOCIAL ICONS */
 .social-buttons 
 {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    list-style: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  list-style: none;
 }
 
 .social-icon
 {
-    display: inline-block;
-    border-radius: 100%;
-    padding: 20px;
-    margin: 40px;
+  display: inline-block;
+  border-radius: 10%;
+  padding: 20px;
+  margin: 40px;
 }
 
 .fb-colour 
 {
-  color: #3b5998;
+  border: 3px solid #000000;
+  background-color: #3b5998;
+  color: #fefefe;
 }
 
 .fb-colour:hover 
 {
-  background-color: #3b5998;
-  color: #fff;
+  border: 3px solid #51a866;
+  background-color: #000000;
+  color: #3b5998;
 }
 
 .twitter-colour 
 {
-  color: #00acee;
+  border: 3px solid #000000;
+  background-color: #00acee;
+  color: #ffffff;
 }
 
 .twitter-colour:hover 
 {
-  background-color: #00acee;
-  color: #fff;
+  border: 3px solid #51a866;
+  background-color: #000000;
+  color: #00acee;
 }
 
 .linkedIn-colour 
 {
-  color: #0e76a8;
+  border: 3px solid #000000;
+  background-color: #0e76a8;
+  color: #ffffff;
 }
 
 .linkedIn-colour:hover 
 {
-  background-color: #0e76a8;
-  color: #fff;
+  border: 3px solid #51a866;
+  background-color: #000000;
+  color: #0e76a8;
 }
 
 /* ================================================================================================ */
@@ -424,7 +461,7 @@ button {
   }
   
   #arrow-down a {
-    padding-top: 70px;
+    padding-top: 100px;
   }
   
   #arrow-down a span {
