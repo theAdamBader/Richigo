@@ -405,18 +405,18 @@ button {
   color: #3b5998;
 }
 
-.twitter-colour 
+.instagram-colour 
 {
   border: 3px solid #000000;
-  background-color: #00acee;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
   color: #ffffff;
 }
 
-.twitter-colour:hover 
+.instagram-colour:hover 
 {
   border: 3px solid #51a866;
-  background-color: #000000;
-  color: #00acee;
+  background: #000000;
+  color: #ffffff;
 }
 
 .linkedIn-colour 
@@ -431,6 +431,20 @@ button {
   border: 3px solid #51a866;
   background-color: #000000;
   color: #0e76a8;
+}
+
+.twitter-colour 
+{
+  border: 3px solid #000000;
+  background-color: #00acee;
+  color: #ffffff;
+}
+
+.twitter-colour:hover 
+{
+  border: 3px solid #51a866;
+  background-color: #000000;
+  color: #00acee;
 }
 
 /* ================================================================================================ */
