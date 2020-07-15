@@ -370,4 +370,9 @@ p {
 @media only screen and (max-width: 650px) {
   .prev, .next,.caption {display: none;}
   .prev2, .next2 {display: none;}
+  .close 
+  {
+    right: -30px;
+    top: 40px;
+  }
 }
