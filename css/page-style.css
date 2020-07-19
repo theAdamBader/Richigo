@@ -8,6 +8,7 @@ body {
 .container {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
 .text-box {
@@ -372,7 +373,7 @@ p {
   .prev2, .next2 {display: none;}
   .close 
   {
-    right: -30px;
+    right: 10px;
     top: 40px;
   }
 }

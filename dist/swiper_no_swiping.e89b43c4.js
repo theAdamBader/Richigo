@@ -117,72 +117,45 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/jquery.js":[function(require,module,exports) {
-$(document).ready(function () {
-  //AUTO-SLIDESHOW FOR GAMES DESIGN
-  $("#slideshowGames > div:gt(0)").hide();
-  setInterval(function () {
-    $('#slideshowGames > div:first').fadeOut(2000).next().fadeIn(2000).end().appendTo('#slideshowGames');
-  }, 3350); //AUTO-SLIDESHOW FOR PHOTOGRAPHY
+})({"js/swiper_no_swiping.js":[function(require,module,exports) {
+var _C = document.querySelector('.slideshow-containerss'),
+    N = _C.children.length;
 
-  $("#slideshow > div:gt(0)").hide();
-  setInterval(function () {
-    $('#slideshow > div:first').fadeOut(2000).next().fadeIn(2000).end().appendTo('#slideshow');
-  }, 3350); //FOR PRE-LOADER
+var i = 0,
+    x0 = null;
 
-  setTimeout(function () {
-    $('.loader').fadeToggle();
-  }, 1500); //FLEXBOX IMAGES    
+function unify(e) {
+  return e.changedTouches ? e.changedTouches[0] : e;
+}
 
-  var $overlay = $("<div id='light-box'><span class='close-img'>&times</span></div>");
-  var $image = $('<img>');
-  var $caption = $('<h3></h3>');
-  var imageUrl;
-  var imageAlt;
-  $('body').append($overlay);
-  $overlay.hide();
-  $('.flex-img').click(function () {
-    imageUrl = $(this).attr('src');
-    imageAlt = $(this).attr('alt');
-    $overlay.append($image);
-    $overlay.append($caption);
-    $image.attr('src', imageUrl);
-    $caption.text(imageAlt);
-    $overlay.fadeIn('500');
-    $image.fadeIn('500');
-  });
-  $("body").on("click", "#light-box span", function () {
-    $("#light-box").hide();
-  });
-});
-$(document).ready(function () {
-  setTimeout(function () {
-    $("#cookieConsent").fadeIn(200);
-  }, 4000);
-  $("#closeCookieConsent, .cookieConsentOK").click(function () {
-    $("#cookieConsent").fadeOut(200);
-  });
-}); //SCROLL FUNCTION
+;
 
-$(document).ready(function () {
-  $("a").on('click', function (event) {
-    var hash = this.hash;
+function lock(e) {
+  x0 = unify(e).clientX;
+}
 
-    if (this.hash !== "") {
-      event.preventDefault();
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function () {});
-    }
+;
 
-    $('#arrow-up').click(function () {
-      $('html, body').animate({
-        scrollTop: 0
-      }, 800);
-      return false;
-    });
-  });
-});
+function move(e) {
+  if (x0 || x0 === 0) {
+    var dx = unify(e).clientX - x0,
+        s = Math.sign(dx);
+    if ((i > 0 || s < 0) && (i < N - 1 || s > 0)) _C.style.setProperty('--i', i -= s);
+    x0 = null;
+  }
+}
+
+;
+
+_C.style.setProperty('--n', N);
+
+_C.addEventListener('mousedown', lock, false);
+
+_C.addEventListener('touchstart', lock, false);
+
+_C.addEventListener('mouseup', move, false);
+
+_C.addEventListener('touchend', move, false);
 },{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -211,7 +184,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64171" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59276" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -387,5 +360,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/jquery.js"], null)
-//# sourceMappingURL=/jquery.87f08830.js.map
+},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/swiper_no_swiping.js"], null)
+//# sourceMappingURL=/swiper_no_swiping.e89b43c4.js.map
