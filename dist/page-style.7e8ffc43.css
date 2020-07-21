@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ffffff;
+  font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
 }
 
@@ -26,7 +27,7 @@ body {
 }
 
 .headline {
-  font-size: 3em;
+  font-size: 5em;
   text-align: center;
 }
 
@@ -66,7 +67,7 @@ p,
 .numbertext,
 .caption {
   text-transform: uppercase;
-  font-family: "Quicksand", sans-serif;
+  line-height: 1.5em;
 }
 
 p {
@@ -375,6 +376,12 @@ p {
   {
     right: 10px;
     top: 40px;
+  }
+  .headline {
+    font-size: 12vw;
+  }
+  .title {
+    font-size: 9vw;
   }
 }
 
