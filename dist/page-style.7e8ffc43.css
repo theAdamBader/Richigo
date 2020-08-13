@@ -385,4 +385,13 @@ p {
   }
 }
 
+@media only screen and (max-width: 1332px) {
+  .music-column{
+    flex: 100%;
+    -ms-flex: 100%;
+    max-width: 100%;
+    padding: 0 4px;
+  }
+}
+
 /*# sourceMappingURL=/page-style.7e8ffc43.css.map */
