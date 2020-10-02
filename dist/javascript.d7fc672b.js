@@ -118,7 +118,12 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/javascript.js":[function(require,module,exports) {
-//MODAL BOX
+/* MODAL BOX CREATED FOR THE INDEX.HTML 
+  *A modal box that was created so that when you press 'About me' it would open a modal box
+  *The btn.onclick allows to open the box only if the button is press
+  *If the button is not pressed then the openAnimation would remain hidden
+  *The cls.onclick has a similar function as the btn.onclick
+*/
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("theButton");
 var cls = document.getElementById("close");
@@ -139,19 +144,8 @@ cls.onclick = function () {
   }
 
   modal.classList.remove('openAnimation');
-}; //SPOTLIGHT EFFECT
-
-
-var spotlightEle = document.querySelector('.focus');
-document.addEventListener('mousemove', function (e) {
-  var coords = {
-    x: e.clientX,
-    y: e.clientY
-  };
-  spotlightEle.style.setProperty('--x', "".concat(coords.x, "px"));
-  spotlightEle.style.setProperty('--y', "".concat(coords.y, "px"));
-});
-},{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+};
+},{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -179,7 +173,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63189" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61528" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -355,5 +349,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/javascript.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/javascript.js"], null)
 //# sourceMappingURL=/javascript.d7fc672b.js.map

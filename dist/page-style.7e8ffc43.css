@@ -12,9 +12,9 @@ body {
   overflow-x: hidden;
 }
 
-.text-box {
-  padding-top: 50px;
-  padding-bottom: 100px;
+.wrapper{
+  max-width: 60%;
+  margin: 60px auto;
 }
 
 .title {
@@ -29,60 +29,19 @@ body {
 .headline {
   font-size: 5em;
   text-align: center;
-}
-
-.sub-title {
-  font-size: 1.8em;
-  height: auto;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.paragraph-container {
-  height: auto;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.5em;
-}
-
-.top-page {
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  background-color: #effd56;
-  top: 0;
-  left: -10px;
-  padding: 60px;
-  z-index: -1;
-  transform: rotate(-1deg);
+  margin-bottom: 0;
 }
 
 h1,
 h2,
-h3,
-p,
-.numbertext,
-.caption {
+h3{
   text-transform: uppercase;
   line-height: 1.5em;
 }
 
 p {
   color: #000000;
-}
-
-.strip {
-  position: absolute;
-  height: 75%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: #51a866;
-  padding: 10px;
-  transform: rotate(1deg);
+  line-height: 1.5em;
 }
 
 /* ================================================================================================ */
@@ -122,7 +81,7 @@ p {
 .music-lets-you-lose-control{
   padding: 4px 0;
   border-radius: 1%;
-  max-width: 60%;
+  max-width: 90%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -180,203 +139,50 @@ p {
 {
   background-color: #ff7700;
   color: #ffffff;
-  width: 240px;
+}
+
+.spotify-colour 
+{
+  background-color: #000;
+  color: #1DB954;
+  transition: ease-in-out 0.6s;
+}
+
+.spotify-colour:hover 
+{
+  background-color: #1DB954;
+  color: #ffffff;
+}
+
+.itunes-colour 
+{
+  background-color: #000;
+  color: #EA4CC0;
+  transition: ease-in-out 0.6s;
+}
+
+.itunes-colour:hover 
+{
+  background-color: #EA4CC0;
+  color: #ffffff;
+}
+
+.napster-colour 
+{
+  background-color: #000;
+  color: #fff;
+  transition: ease-in-out 0.6s;
+}
+
+.napster-colour:hover 
+{
+  background-color: #fff;
+  color: #000;
 }
 
 /* ================================================================================================ */
-
-/* 3D ANIMATION/GAME DESIGN IMAGE SLIDER */
-.image-slides {
-  height: 500px;
-  display: none; 
-  margin-top: 50px;
-  text-align: center;
-}
-
-.image-position {
-  max-width: 100%;
-  max-height: 100%;
-  border: 5px solid #949494;
-  vertical-align: middle;
-}
-
-.slideshow-container {
-  max-width: 500px;
-  position: relative;
-  margin: auto;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  /* margin-top: -22px; */
-  color: #ffffff;
-  background-color: #7c7c7c;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 20px;
-  user-select: none;
-}
-
-.next {right: -60px;}
-
-.prev{left: -60px;}
-
-.prev:hover, .next:hover {
-  background-color: #000;
-}
-
-.caption {
-  color: #f2f2f2;
-  background: #000000;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-}
-
-.numbertext {
-  color: #f2f2f2;
-  background: #000000;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* ================================================================================================ */
-
-/* GAME DESIGN IMAGE SLIDER II */
-.image-slides2 {
-  height: 500px;
-  display: none; 
-  margin-top: 50px;
-  text-align: center;
-}
-
-.image-position2 {
-  max-width: 100%;
-  max-height: 100%;
-  border: 5px solid #949494;
-  vertical-align: middle;
-}
-
-.slideshow-container2 {
-  max-width: 500px;
-  position: relative;
-  margin: auto;
-}
-
-.prev2, .next2 {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  color: #ffffff;
-  background-color: #7c7c7c;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 20px;
-  user-select: none;
-}
-
-.next2 {right: -60px;}
-
-.prev2{left: -60px;}
-
-.prev2:hover, .next2:hover {
-  background-color: #000;
-}
-
-.numbertext2 {
-  color: #f2f2f2;
-  background: #000000;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-.dot2 {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active2, .dot2:hover {
-  background-color: #717171;
-}
-
-.fade2 {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade2;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade2 {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade2 {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
 
 @media only screen and (max-width: 650px) {
-  .prev, .next,.caption {display: none;}
-  .prev2, .next2 {display: none;}
-  .close 
-  {
-    right: 10px;
-    top: 40px;
-  }
   .headline {
     font-size: 12vw;
   }
@@ -385,7 +191,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 1332px) {
+@media only screen and (max-width: 1480px) {
   .music-column{
     flex: 100%;
     -ms-flex: 100%;

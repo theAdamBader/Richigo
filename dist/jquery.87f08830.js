@@ -118,35 +118,26 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/jquery.js":[function(require,module,exports) {
+/* LIGHTBOX IMAGES (PHOTOGRAPHY PAGE)
+ *The overlay allows to find the light box ID and create the close tag to be able to close the overlay image
+ *The $image grab the <img> tag so that later it can be use $image.attr('src', imageFile); to find the source attribution and the image souce file
+ *The imageAlt finds the alt function and covert it into a caption that would then be automatically put into a <h3> tag
+ *When the image is clicked then it would fade in within 0.5s for a smoother transition else when you close the image, the light box would hide
+*/
 $(document).ready(function () {
-  //AUTO-SLIDESHOW FOR GAMES DESIGN
-  $("#slideshowGames > div:gt(0)").hide();
-  setInterval(function () {
-    $('#slideshowGames > div:first').fadeOut(2000).next().fadeIn(2000).end().appendTo('#slideshowGames');
-  }, 3350); //AUTO-SLIDESHOW FOR PHOTOGRAPHY
-
-  $("#slideshow > div:gt(0)").hide();
-  setInterval(function () {
-    $('#slideshow > div:first').fadeOut(2000).next().fadeIn(2000).end().appendTo('#slideshow');
-  }, 3350); //FOR PRE-LOADER
-
-  setTimeout(function () {
-    $('.loader').fadeToggle();
-  }, 1500); //FLEXBOX IMAGES    
-
   var $overlay = $("<div id='light-box'><span class='close-img'>&times</span></div>");
   var $image = $('<img>');
   var $caption = $('<h3></h3>');
-  var imageUrl;
+  var imageFile;
   var imageAlt;
   $('body').append($overlay);
   $overlay.hide();
   $('.flex-img').click(function () {
-    imageUrl = $(this).attr('src');
+    imageFile = $(this).attr('src');
     imageAlt = $(this).attr('alt');
     $overlay.append($image);
     $overlay.append($caption);
-    $image.attr('src', imageUrl);
+    $image.attr('src', imageFile);
     $caption.text(imageAlt);
     $overlay.fadeIn('500');
     $image.fadeIn('500');
@@ -155,35 +146,35 @@ $(document).ready(function () {
     $("#light-box").hide();
   });
 });
+/* COOKIE BANNER 
+  *A simple cookie banner that passes information to consumers that they would enjoy experience on a desktop that has a screen width of >= 786
+  *It is set to have a timer where it will fade in for 0.2s and if the consumer presses 'OK' then it will fade out for 0.2
+*/
+
 $(document).ready(function () {
   setTimeout(function () {
-    $("#cookieConsent").fadeIn(200);
+    $("#cookieBanner").fadeIn(200);
   }, 4000);
-  $("#closeCookieConsent, .cookieConsentOK").click(function () {
-    $("#cookieConsent").fadeOut(200);
+  $("#closeCookieBanner, .cookieBannerOK").click(function () {
+    $("#cookieBanner").fadeOut(200);
   });
-}); //SCROLL FUNCTION
+});
+/* SCROLL FUNCTION 
+  *Reference: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2
+*/
 
 $(document).ready(function () {
   $("a").on('click', function (event) {
     var hash = this.hash;
 
     if (this.hash !== "") {
-      event.preventDefault();
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 800, function () {});
     }
-
-    $('#arrow-up').click(function () {
-      $('html, body').animate({
-        scrollTop: 0
-      }, 800);
-      return false;
-    });
   });
 });
-},{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -211,7 +202,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63189" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61528" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -387,5 +378,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/jquery.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/jquery.js"], null)
 //# sourceMappingURL=/jquery.87f08830.js.map

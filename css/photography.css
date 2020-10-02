@@ -2,8 +2,7 @@
 {
     height: 100%;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 100px auto;
 }
 
 .row {
@@ -94,6 +93,6 @@
       max-width: 100%;
     }
 
-    .close-img{margin: 10px;}
+    .close-img{margin-top: 50px; margin-right: 20px;}
     #light-box h3{bottom:15%; font-size: 13px;}
   }  

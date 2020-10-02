@@ -10,7 +10,7 @@
     
     <!-- CSS -->
     <link href="./css/page-style.css" rel="stylesheet">
-    <!-- <link href="./css/pre-loader.css" rel="stylesheet"> -->
+    <link href="./css/nav.css" rel="stylesheet">
     <link href="./css/photography.css" rel="stylesheet">
     
 	<!-- FONT -->
@@ -30,18 +30,45 @@
         </div>
     </div>
 
-<div class="container">
-    <a href="./index.html" class="close"></a>
+<div id="up" class="container">
+    
+   
+    <div class= "navbar">
+        <nav class="navigation">
+            <div id="hamburger-btn">
+                <div class="hamburger"></div>
+            </div>
 
-    <div class="top-page">
-        <div class="strip"> 
-            <p class="title">PHOTOGRAPHY</p>
-        </div>
+            <!-- SIDEBAR -->
+            <div id="sidebar">
+                <div class= "overlay-content">
+                    <ul>
+                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="./3danimation.html">3D ANIMATION</a></li>
+                        <li><a href="./gamedesign.html">GAME DESIGN</a></li>
+                        <li><a href="./music.html">MUSIC</a></li>
+                        <li><a href="#up">PHOTOGRAPHY</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="logo"><a href="./index.html">RICHARD WAJMAN</a></div>
+            <div class="nav-space"></div>
+
+            <!-- MAIN NAV -->
+            <div class="nav-items">
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./3danimation.html">3D ANIMATION</a></li>
+                    <li><a href="./gamedesign.html">GAME DESIGN</a></li>
+                    <li><a href="./music.html">MUSIC</a></li>
+                    <li><a href="#up">PHOTOGRAPHY</a></li>
+                </ul>
+            </div>
+        </nav>
     </div>
 
-
     <!-- Photo Grid -->
-    <h1 class="headline">Photography</h1>
     <div class="image-wrapper">
         <div class="row"> 
             <div class="column">
@@ -62,12 +89,12 @@
                 <img class= "flex-img" src="./img/photography/13.jpeg" alt="This picture was taken in Tokyo. This photo makes me think about how information is passed on through the internet, both light and dark pieces but ultimately still beautiful.">
             </div> 
             <div class="column">
-                <img class= "flex-img" src="./img/photography/14.jpeg" alt=" ">
+                <img class= "flex-img" src="./img/photography/14.jpeg" alt="Taken next to a Tokyo bike-stand, it showed me how many people have different journeys along their way, everyone has a different path">
                 <img class= "flex-img" src="./img/photography/15.jpeg" alt="This photo was taken before Kawasaki arcade was closed down, now only a part of history.">
                 <img class= "flex-img" src="./img/photography/16.jpeg" alt="This photo was taken in London. This photo perfectly personifies the city with this gritty and laidback attitude, as this is what London looks like. It’s a gritty, dirty and has personality.">
                 <img class= "flex-img" src="./img/photography/17.jpeg" alt="The symmetry and the colour show that corporate building can also look so wonderful even when looking up to them.">
                 <img class= "flex-img" src="./img/photography/18.jpeg" alt="The red leaves represent the flow of blood through your arteries; this is the life that goes through us everyday. This is nature."> 
-                <img class= "flex-img" src="./img/photography/19.jpeg" alt=" ">
+                <img class= "flex-img" src="./img/photography/19.jpeg" alt="Representing the reflection of heat, coming from the sand">
                 <img class= "flex-img" src="./img/photography/20.jpeg" alt="This photo was taken in Edinburgh. The photo feels as though it was taken from the perspective of a creature awakening from their slumber and coming out of cave.">
             </div> 
             <div class="column">
@@ -84,6 +111,7 @@
 
   	<!-- JavaScript/jQuery  -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="./js/hamburger_menu.js"></script>
     <script src="./js/jquery.js"></script>
 	<script src="./js/javascript.js"></script>
 
