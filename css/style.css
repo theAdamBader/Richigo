@@ -7,16 +7,42 @@ body {
 }
   
 /* CONTAINER */
-.container {
-  height: 100%;
+.desktop-container {
+  position: relative;
   width: 100%;
+  height: 100vh;
 }
 
-.wrapper {
-  width: 100%;;
-  height: 100%;
-  margin-top: 50px;
+.desktop-container .right-img{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-10%, -50%);
 }
+
+.desktop-container .left-img{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.desktop-container .left-svg{
+  position: absolute;
+  top: calc(50% - 300px);
+  transform: translateY(-50%);
+}
+
+.desktop-container .rectOb{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.desktop-container .about-btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+} 
 
 .mobpage {
   display: none;
@@ -74,21 +100,16 @@ span {
 .right-img {
   max-height: 850px;
   max-width: 482px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(-20%, 0%);
-  margin: 15px 0;
 }
 
 .left-img {
   max-height: 605px;
   max-width: 605px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: 75px;
-  margin-left: 5%;
+}
+
+.left-svg{
+  max-height: 605px;
+  max-width: 605px;
 }
 
 .st4{fill:none;}
@@ -143,7 +164,6 @@ span {
   width: 100%;
   position: absolute;
   left: 0;
-  margin-top: 250px;
   z-index: -99;
 }
 
@@ -154,12 +174,6 @@ span {
 
 .about-btn {
   width: 100%;
-  height: 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  text-align: center;
-  margin-top: 350px;
   z-index: 99;
 }
 
@@ -374,20 +388,20 @@ span {
   .right-img {
     max-height: 533px;
     max-width: 355px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-20%, 25%);
   }
   
   .left-img {
     max-height: 403px;
     max-width: 403px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 170px;
-    margin-left: 5%;
+  }
+
+  .left-svg{
+    max-height: 403px;
+    max-width: 403px;
+  }
+
+  .desktop-container .left-svg{
+    top: calc(50% - 200px);
   }
   
   .one{
@@ -405,25 +419,29 @@ span {
   .right-img {
     max-height: 450px;
     max-width: 266px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-20%, 45%);
   }
   
   .left-img {
     max-height: 303px;
     max-width: 303px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 225px;
-    margin-left: 5%;
   }  
+
+  .left-svg {
+    max-height: 303px;
+    max-width: 303px;
+  }
+
+  .desktop-container .left-svg{
+    top: calc(50% - 150px);
+  }
 }
 
 /* MOBILE VERSION */
 @media screen and (max-width: 768px) {
+  body{
+    overflow-y: visible;
+  }
+
   .mobpage {
     margin: 0;
     padding: 0;
