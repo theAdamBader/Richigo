@@ -3,7 +3,7 @@
     width: 100%;
     position: fixed;
     padding: 20px 0;
-    background: #51a866;
+    background: #85a8b6;
     z-index: 999;
 }
   
@@ -25,7 +25,7 @@
 }
 
 .nav-items a:hover {
-    color: #effd56;
+    color: #885ca1;
 }
 
 .nav-items li {
@@ -48,7 +48,7 @@
 }
   
 .logo a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-size: 1.5rem;
 }
@@ -129,7 +129,7 @@
         position: fixed;
         top: 0;
         right:-70%;
-        background-color: #51a866;
+        background-color: #85a8b6;
         overflow-x: hidden;
         transition: 0.5s;
     }
@@ -153,7 +153,7 @@
         transition: 0.3s;
     }
     
-    #sidebar a:hover, #sidebar a:focus {color: #effd56;}
+    #sidebar a:hover, #sidebar a:focus {color: #885ca1;}
 }
 
 @media screen and (max-width: 900px) {
@@ -164,7 +164,7 @@
         position: fixed;
         top: 0;
         right:-55%;
-        background-color: #51a866;
+        background-color: #85a8b6;
         overflow-x: hidden;
         transition: 0.5s;
     }
@@ -179,7 +179,7 @@
         position: fixed;
         top: 0;
         right:-40%;
-        background-color: #51a866;
+        background-color: #85a8b6;
         overflow-x: hidden;
         transition: 0.5s;
     }

@@ -66,10 +66,6 @@ button {
 
 p{line-height: 1.5em;}
 
-span {
-  color: #51a866;
-}
-
 .title {
   font-size: 80px;
   text-align: center;
@@ -115,9 +111,9 @@ span {
 .st4{fill:none;}
 
 .svg-text{font-size: 70px;}
-.svg-text:hover{fill: #51a866;}
+.svg-text:hover{fill: #885ca1;}
 
-.colour-svg {color: #51a866;}
+.colour-svg {color: #885ca1;}
 
 .left-image{display: block;}
 .left-image1{display: none;}
@@ -169,7 +165,7 @@ span {
 
 .rect-background{
   top: 0;
-  fill: #9dcc68;
+  fill: #85a8b6;
 }
 
 .about-btn {
@@ -178,13 +174,13 @@ span {
 }
 
 .btn {
-  background: white;
-  color: #51a866;
+  background: #fff;
+  color: #885ca1;
   width: 150px;
   height: 50px;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid #51a866;
+  border: 2px solid #885ca1;
   font-size: 20px;
   cursor: pointer;
   display: flex;
@@ -215,17 +211,17 @@ span {
 
 .btn:hover::before {
   width: 0px;
-  background: #e9f179;
+  background: #b9d9ba;
 }
 
 .btn:hover::after {
   height: 0px;
-  background: #e9f179;
+  background: #b9d9ba;
 }
 
 .btn:hover {
-  color: #000;
-  background: #e9f179;
+  color: #85a8b6;
+  background: #885ca1;
 }
 
 /* ================================================================================================ */
@@ -523,8 +519,8 @@ span {
 
   #cookieBanner a.cookieBannerOK
   {
-    background-color: #427c50;
-    color: #effd56;
+    background-color: #885ca1;
+    color: #fff;
     display: inline-block;
     border-radius: 15%;
     padding: 5px 25px;
