@@ -30,7 +30,7 @@ body {
   position: absolute;
   top: calc(50% - 300px);
   transform: translateY(-50%);
-  z-index: 999;
+  z-index: 100;
 }
 
 .desktop-container .rectOb{
@@ -245,7 +245,7 @@ p{line-height: 1.5em;}
   content: " ";
   height: 33px;
   width: 2px;
-  background-color: #51a866;
+  background-color: #885ca1;
 }
 #close:before {
   transform: rotate(45deg);
@@ -270,7 +270,7 @@ p{line-height: 1.5em;}
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
-  z-index: 99;
+  z-index: 101;
 }
 
 .modal-content {
